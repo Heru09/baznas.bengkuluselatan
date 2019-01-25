@@ -97,21 +97,36 @@
                                     </div>
                                     </div>
                                     <div class="tab-pane p-20" id="messages2" role="tabpanel">
-                                    <form>
-                                        <div class="row form-group">
-                                            <div class="col-12 col-md-9">
-                                                <select name="select" id="select" class="form-control">
-                                                    <option value="0">Pilih Jenis Bantuan</option>
-                                                    <option value="1">EKONOMI</option>
-                                                    <option value="2">PENDIDIKAN</option>
-                                                    <option value="3">KESEHATAN</option>
-                                                    <option value="3">DAKWAH ADVOKASI</option>
-                                                    <option value="3">KEMANUSIAAN</option>
-                                                </select>
+                                    <div class="content">
+                                        <div class="animated fadeIn">
+                                            <div class="row">   
+                                                <div class="col-lg-6">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <strong>Pilih</strong> Proposal
+                                                            </div>
+                                                            <div class="card-body card-block">
+                                                                <div class="has-warning form-group"><label for="inputIsInvalid" class=" form-control-label">Choose One</label><input type="text" id="inputIsInvalid" class="is-invalid form-control"></div>
+                                                                <div class="form-actions form-group">
+                                                                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <strong>Usulan</strong><em>(proposal)</em>
+                                                            </div>
+                                                            <div class="card-body card-block">
+                                                                <div class="has-success form-group"><label for="inputSuccess2i" class=" form-control-label">Jenis</label><input type="text" id="inputSuccess2i" class="form-control-success form-control"></div>
+                                                            </div>
+                                                        </div>
+                                                </div>
                                             </div>
-                                            <button type="button" class="btn btn-info">Proses</button>
-                                        </div>
-                                    </form>
+                                        </div><!-- .animated -->
+                                    </div><!-- .content -->
+                                    
                                     </div>
                                 </div>
                             </div>
