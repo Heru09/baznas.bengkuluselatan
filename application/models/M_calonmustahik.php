@@ -3,9 +3,9 @@
 class M_calonmustahik extends CI_Model {
 
 	var $table = 'calonmustahik'; 
-	var $select  = array('nama','nik','jk','tempatlahir','tanggallahir','alamatlengkap','kec','keldes','idkeldes','terdaftar'); 
-	var $column_order = array('nama','nik','jk','tempatlahir','tanggallahir','alamatlengkap','kec','keldes','idkeldes','terdaftar'); 
-	var $column_search = array('nama','nik','jk','tempatlahir','tanggallahir','alamatlengkap','kec','keldes','idkeldes','terdaftar');
+	var $select  = array('nama','nik','jk','tempatlahir','tanggallahir','alamatlengkap','kec','namauser','iduser','terdaftar'); 
+	var $column_order = array('nama','nik','jk','tempatlahir','tanggallahir','alamatlengkap','kec','namauser','iduser','terdaftar'); 
+	var $column_search = array('nama','nik','jk','tempatlahir','tanggallahir','alamatlengkap','kec','namauser','iduser','terdaftar');
 	
 	var $order = array('nama' => 'asc'); 
 
@@ -15,9 +15,9 @@ class M_calonmustahik extends CI_Model {
 		$this->load->database();
 	}
 
-	public function get_datatables($idkeldes, $keldes)
+	public function get_datatables($iduser, $namauser)
     {
-        $this->_get_datatables_query($idkeldes, $keldes);
+        $this->_get_datatables_query($iduser, $namauser);
        
         if($this->input->post['length'] != -1)
             $this->db->limit($this->input->post['length'], $this->input->post['start']);
@@ -26,9 +26,9 @@ class M_calonmustahik extends CI_Model {
         return $query->result();
     }
 
-    public function count_filtered($idkeldes, $keldes)
+    public function count_filtered($iduser, $namauser)
     {
-        $this->_get_datatables_query($idkeldes, $keldes);
+        $this->_get_datatables_query($iduser, $namauser);
        
         $query = $this->db->get();
        
@@ -42,17 +42,17 @@ class M_calonmustahik extends CI_Model {
         return $this->db->count_all_results();
     }
 
-    private function _get_datatables_query($idkeldes, $keldes)
+    private function _get_datatables_query($iduser, $namauser)
     {
 
         $this->db
              ->select($this->select)
              ->from($this->table);
 
-        if($idkeldes!='' && $keldes!='') 
+        if($iduser!='' && $namauser!='') 
         {
 
-            $this->db->where('idkeldes', $idkeldes);
+            $this->db->where('iduser', $iduser);
         }
 
         $i = 0;

@@ -3,7 +3,7 @@
 class M_admin extends CI_Model {
 
 	function getmustahik(){
-		$this->db->order_by("kec asc, keldes asc");
+		$this->db->order_by("kec asc, namauser asc");
 		$query = $this->db->get("calonmustahik");
 		return $query->result_array();
 	}

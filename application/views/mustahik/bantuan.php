@@ -4,7 +4,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body p-b-0">
-                                <h4 class="card-title">Data Pribadi</h4>
+                                <h4 class="card-title">Data Mustahik Dan Data Usulan Calon Mustahik</h4>
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs customtab" role="tablist">
                                     <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home2" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Home</span></a> </li>
@@ -18,20 +18,45 @@
                                             <form>
                                             <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">Nama
-                                                <input type="text" name="nama" id="nama" value="<?php echo $_GET['nama'];?>" class="form-control input-default " >
+                                                <input type="text" name="nama" id="nama" value="" class="form-control input-default " >
+                                            </div>
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Nama Panggilan
+                                                <input type="text" name="nik" id="nik" value="" class="form-control input-rounded" >
                                             </div>
                                             <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">NIK
-                                                <input type="text" name="nik" id="nik" value="<?php echo $_GET['nik'];?>" class="form-control input-focus" >
+                                                <input type="text" name="kec" id="kec" value="" class="form-control input-focus" >
                                             </div>
                                             <div class="form-group">
-                                                <p class="text-muted m-b-15 f-s-12">KECAMATAN
-                                                <input type="text" name="kec" id="kec" value="<?php echo $this->session->userdata('kec');?>" class="form-control input-rounded" >
+                                                <p class="text-muted m-b-15 f-s-12">Jenis Kelamin
+                                                <input type="text" name="kec" id="kec" value="" class="form-control input-rounded" >
                                             </div>
                                             <div class="form-group">
-                                                <p class="text-muted m-b-15 f-s-12">KELURAHAN/DESA
-                                                <input type="text" name="kec" id="kec" value="<?php echo $this->session->userdata('keldes');?>" class="form-control input-rounded" >
+                                                <p class="text-muted m-b-15 f-s-12">Tempat Lahir
+                                                <input type="text" name="kec" id="kec" value="" class="form-control input-rounded" >
                                             </div>
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Tanggal Lahir
+                                                <input type="text" name="kec" id="kec" value="" class="form-control input-rounded" >
+                                            </div>
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Agama
+                                                <input type="text" name="kec" id="kec" value="" class="form-control input-rounded" >
+                                            </div>
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">HP
+                                                <input type="text" name="kec" id="kec" value="" class="form-control input-rounded" >
+                                            </div>
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Alamat
+                                                <input type="text" name="kec" id="kec" value="" class="form-control input-rounded" >
+                                            </div>
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Terdaftar
+                                                <input type="text" name="kec" id="kec" value="" class="form-control input-rounded" >
+                                            </div>
+                                            <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Hapus</button>
                                             </form>
 
                                         </div>
@@ -72,7 +97,21 @@
                                     </div>
                                     </div>
                                     <div class="tab-pane p-20" id="messages2" role="tabpanel">
-                                            Data Usulan
+                                    <form>
+                                        <div class="row form-group">
+                                            <div class="col-12 col-md-9">
+                                                <select name="select" id="select" class="form-control">
+                                                    <option value="0">Pilih Jenis Bantuan</option>
+                                                    <option value="1">EKONOMI</option>
+                                                    <option value="2">PENDIDIKAN</option>
+                                                    <option value="3">KESEHATAN</option>
+                                                    <option value="3">DAKWAH ADVOKASI</option>
+                                                    <option value="3">KEMANUSIAAN</option>
+                                                </select>
+                                            </div>
+                                            <button type="button" class="btn btn-info">Proses</button>
+                                        </div>
+                                    </form>
                                     </div>
                                 </div>
                             </div>

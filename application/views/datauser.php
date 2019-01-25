@@ -234,8 +234,8 @@
                                                 <th>Email</th>
                                                 <th>Password</th>
                                                 <th>Kecamatan</th>
-                                                <th>Kelurahan/Desa</th>
-                                                <th>ID Kelurahan/Desa</th>
+                                                <th>User</th>
+                                                <th>Id User</th>
                                                 <th>Status</th>
                                             </tr>
                                         </thead>
@@ -249,8 +249,8 @@
                                                 <td><?php echo $row->email;?></td>
                                                 <td><?php echo $row->password;?></td>
                                                 <td><?php echo $row->kec;?></td>
-                                                <td><?php echo $row->keldes;?></td>
-                                                <td><?php echo $row->idkeldes;?></td>
+                                                <td><?php echo $row->namauser;?></td>
+                                                <td><?php echo $row->iduser;?></td>
                                                 <td><?php echo $row->status;?></td>
                                             </tr>
                                             <?php

@@ -207,7 +207,7 @@
             <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-primary">WELCOME DS/KEL. <?php  echo $this->session->userdata('keldes');?> 
+                    <h3 class="text-primary">WELCOME <?php  echo $this->session->userdata('namauser');?> 
                         KEC. <?php echo $this->session->userdata('kec');?></h3> </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">

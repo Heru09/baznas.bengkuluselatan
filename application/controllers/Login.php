@@ -21,8 +21,8 @@ class Login extends CI_Controller {
 				$sess_data['email'] = $data->email;
 				$sess_data['password']	 = $data->password;
 				$sess_data['kec']	 	 = $data->kec;
-				$sess_data['keldes']	 = $data->keldes;
-				$sess_data['idkeldes']	 = $data->idkeldes;
+				$sess_data['namauser']	 = $data->namauser;
+				$sess_data['iduser']	 = $data->iduser;
 				$sess_data['status']	 = $data->status;
 				$this->session->set_userdata($sess_data);
 				if($sess_data['status'] == 1){

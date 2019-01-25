@@ -18,10 +18,10 @@ class Mcalonmustahik extends CI_Controller {
 
 	function get_data_calonmustahik()
 	{
-		$idkeldes = $this->session->userdata('idkeldes');
-		$keldes = $this->session->userdata('keldes');
+		$iduser = $this->session->userdata('iduser');
+		$namauser = $this->session->userdata('namauser');
 
-		$list = $this->m_calonmustahik->get_datatables($idkeldes, $keldes);
+		$list = $this->m_calonmustahik->get_datatables($iduser, $namauser);
 		$data = array();
 		$no = $this->input->post('start');
 		foreach ($list as $field){
@@ -41,7 +41,7 @@ class Mcalonmustahik extends CI_Controller {
 		$output = array(
             "draw" => $this->input->post('draw'),
             "recordsTotal" => $this->m_calonmustahik->count_all(),
-            "recordsFiltered" => $this->m_calonmustahik->count_filtered($idkeldes,$keldes),
+            "recordsFiltered" => $this->m_calonmustahik->count_filtered($iduser,$namauser),
             "data" => $data,
         );
    
