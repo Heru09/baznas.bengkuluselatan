@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: 25 Jan 2019 pada 16.02
--- Versi Server: 5.7.24-0ubuntu0.18.04.1
+-- Generation Time: 27 Jan 2019 pada 23.56
+-- Versi Server: 5.7.25-0ubuntu0.18.04.2
 -- PHP Version: 7.2.10-0ubuntu0.18.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -38,7 +38,7 @@ CREATE TABLE `calonmustahik` (
   `tempatlahir` varchar(75) NOT NULL,
   `tanggallahir` date NOT NULL,
   `agama` char(12) NOT NULL,
-  `hp` int(12) NOT NULL,
+  `hp` char(12) NOT NULL,
   `alamatlengkap` text NOT NULL,
   `terdaftar` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -48,7 +48,8 @@ CREATE TABLE `calonmustahik` (
 --
 
 INSERT INTO `calonmustahik` (`no`, `namauser`, `iduser`, `kec`, `nama`, `namapanggilan`, `nik`, `jk`, `tempatlahir`, `tanggallahir`, `agama`, `hp`, `alamatlengkap`, `terdaftar`) VALUES
-(1, 'Palak Bengkerung', 'AN3', 'AIR NIPIS', 'HERU PRASETYO', '', '1701050909940002', 'L', 'PALAK BENGKERUNG', '1994-09-09', 'ISLAM', 0, 'DESA PALAK BENGKERUNG KEC. AIR NIPIS', '2019-01-12');
+(1, 'Palak Bengkerung', 'AN3', 'AIR NIPIS', 'HERU PRASETYO', '', '1701050909940002', 'L', 'PALAK BENGKERUNG', '1994-09-09', 'ISLAM', '0', 'DESA PALAK BENGKERUNG KEC. AIR NIPIS', '2019-01-12'),
+(2, 'RUMAH SAKIT MUHAMMADIYAH KABUPATEN BENGKULU SELATAN', 'RSMU', 'KOTA MANNA', 'HERU PRASETYO', 'HERU', '1701050909940002', 'L', 'PALAK BENGKERUNG', '1994-09-09', 'ISLAM', '085238138038', 'JL BLK KELURAHAN KOTA MEDAN KECAMATAN KOTA MANNA KABUPATEN BENGKULU SELATAN', '2019-01-26');
 
 -- --------------------------------------------------------
 
@@ -89,11 +90,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`email`, `password`, `namauser`, `iduser`, `kec`, `status`) VALUES
-('banxpras@gmail.com', '12345', 'ADMIN', '', '', 1),
-('baznas.airnipis.palakbengkerung@gmail.com', '', 'Palak Bengkerung', 'AN3', 'AIR NIPIS', 0),
-('baznas.bungamas.gindosuli@gmail.com', '', 'Gindosuli', 'BM1', 'BUNGA MAS', 0),
-('baznas.kdi.betungan@gmail.com', '', 'Betungan', 'KDI2', 'KEDURANG ILIR', 0),
-('baznas.koma.kotamedan@gmail.com', '', 'Kota Medan', 'KM5', 'KOTA MANNA', 0);
+('banxpras@gmail.com', '12345', 'HERU PRASETYO ADMIN BAZNAS KABUPATEN BENGKULU SELATAN', '', '', 1),
+('baznas.airnipis.palakbengkerung@gmail.com', '', 'ADMIN DESA PALAK BENGKERUNG', 'AN3', 'AIR NIPIS', 0),
+('baznas.koma.kotamedan@gmail.com', '', 'Kota Medan', 'KM5', 'KOTA MANNA', 0),
+('baznas.rumahsakit.muhammadiyah@gmail.com', '', 'ADMIN RUMAH SAKIT MUHAMMADIYAH KABUPATEN BENGKULU SELATAN', 'rsmu', 'KOTA MANNA', 2),
+('ekobudiarto@yahoo.com', '', 'EKO BUDIARTO ADMIN DESA PALAK BENGKERUNG', 'AN3', 'AIR NIPIS', 0),
+('ritaayuserimpi@gmail.com', '', 'RITA AYU SERIMPI ADMIN RUMAH SAKIT MUHAMMADIYAH KABUPATEN BENGKULU SELATAN', 'RSMU', 'KOTA MANNA', 2);
 
 -- --------------------------------------------------------
 
@@ -130,7 +132,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `calonmustahik`
 --
 ALTER TABLE `calonmustahik`
-  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
