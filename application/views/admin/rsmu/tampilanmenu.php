@@ -9,17 +9,23 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url()."ElaAdmin/"?>images/garuda.png">
-    <title>BAZNAS KAB. BENGKULU SELATAN</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url()."ElaAdmin/"?>images/favicon.png">
+    <title>Ela - Bootstrap Admin Dashboard Template</title>
+
+    <link href="<?php echo base_url()."ElaAdmin/"?>css/lib/chartist/chartist.min.css" rel="stylesheet">
+	<link href="<?php echo base_url()."ElaAdmin/"?>css/lib/owl.carousel.min.css" rel="stylesheet" />
+    <link href="<?php echo base_url()."ElaAdmin/"?>css/lib/owl.theme.default.min.css" rel="stylesheet" />
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url()."ElaAdmin/"?>css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="<?php echo base_url()."ElaAdmin/"?>css/helper.css" rel="stylesheet">
     <link href="<?php echo base_url()."ElaAdmin/"?>css/style.css" rel="stylesheet">
-    <link href="<?php echo base_url()."ElaAdmin/"?>css/lib/chartist/chartist.min.css" rel="stylesheet">
-	<link href="<?php echo base_url()."ElaAdmin/"?>css/lib/owl.carousel.min.css" rel="stylesheet" />
-    <link href="<?php echo base_url()."ElaAdmin/"?>css/lib/owl.theme.default.min.css" rel="stylesheet" />
-    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
+    <!--[if lt IE 9]>
+    <script src="https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
 
 <body class="fix-header fix-sidebar">
@@ -35,10 +41,8 @@
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <!-- Logo -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">
-                        <!-- Logo icon -->
+                    <a class="navbar-brand" href="#">                  
                         <b><img src="<?php echo base_url()."ElaAdmin/"?>images/garuda.png" alt="homepage" class="dark-logo" /></b>
-                        
                     </a>
                 </div>
                 <!-- End Logo -->
@@ -51,7 +55,7 @@
                         <!-- Messages -->
                         <li class="nav-item dropdown mega-dropdown"> <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-th-large"></i></a>
                             <div class="dropdown-menu animated zoomIn">
-                                INI ADALAH SISTEM INFORMASI MUSTAHIK BAZNAS KABUPATEN BENGKULU SELATAN, SEGALA BENTUK PENDAFTARAN DILAKUKAN DI KANTOR DESA/KELURAHAN
+                                HAI INI ADALAH LAYANAN BAZNAS KABUPATEN BENGKULU SELATAN
                                 <!-- <ul class="mega-dropdown-menu row">
                                     <li class="col-lg-3  m-b-30">
                                         <h4 class="m-b-20">CONTACT US</h4>
@@ -98,7 +102,7 @@
                                                     <h5>HAI</h5> <span class="mail-desc">INI ADALAH LAYANAN BAZNAS</span> <span class="time">9:30 AM</span>
                                                 </div>
                                             </a>
-                                            
+                                           
                                         </div>
                                     </li>
                                     <li>
@@ -127,9 +131,7 @@
                                                     <h5>ALAMAT KANTOR</h5> <span class="mail-desc">JL OPRT GHALIB</span> <span class="time">9:30 AM</span>
                                                 </div>
                                             </a>
-                                            <!-- Message -->
                                         </div>
-
                                     </li>
                                     <li>
                                         <a class="nav-link text-center" href="javascript:void(0);"> <strong>See all e-Mails</strong> <i class="fa fa-angle-right"></i> </a>
@@ -161,13 +163,8 @@
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
-                        <li> <a href="<?php echo base_url()?>mcalonmustahik" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard </span></span></a>
-                        </li>
-                        <li class="nav-label">Pendaftaran</li>
-                        <li> <a href="<?php echo base_url()?>mpendaftaran" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Mustahik</span></span></a>
-                        </li>
-                        <li class="nav-label">e-Pid</li>
-                        <li> <a href="<?php echo base_url()?>mpid" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Peraturan</span></span></a>
+                        <li> <a href="<?php echo base_url()?>admadminrsmu/" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard </span></span></a>
+                           
                         </li>
                     </ul>
                 </nav>
@@ -181,8 +178,7 @@
             <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-primary">WELCOME <?php  echo $this->session->userdata('namauser');?> 
-                        KEC. <?php echo $this->session->userdata('kec');?></h3> </div>
+                    <h3 class="text-primary">WELCOME <?php  echo $this->session->userdata('namauser');?></h3> </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
@@ -205,12 +201,7 @@
         <!-- End Page wrapper  -->
     </div>
     <!-- End Wrapper -->
-    
-</body>
-
-</html>
-
-<!-- All Jquery -->
+    <!-- All Jquery -->
     <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/jquery/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/bootstrap/js/popper.min.js"></script>
@@ -221,17 +212,50 @@
     <script src="<?php echo base_url()."ElaAdmin/"?>js/sidebarmenu.js"></script>
     <!--stickey kit -->
     <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
+
+
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/datamap/d3.min.js"></script>
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/datamap/topojson.js"></script>
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/datamap/datamaps.world.min.js"></script>
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/datamap/datamap-init.js"></script>
+
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/weather/jquery.simpleWeather.min.js"></script>
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/weather/weather-init.js"></script>
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/owl-carousel/owl.carousel.min.js"></script>
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/owl-carousel/owl.carousel-init.js"></script>
+
+
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/chartist/chartist.min.js"></script>
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/chartist/chartist-plugin-tooltip.min.js"></script>
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/chartist/chartist-init.js"></script>
     <!--Custom JavaScript -->
     <script src="<?php echo base_url()."ElaAdmin/"?>js/custom.min.js"></script>
 
-    
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/vector-map/jquery.vmap.js"></script>
+    <!-- scripit init-->
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/vector-map/jquery.vmap.min.js"></script>
+    <!-- scripit init-->
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/vector-map/jquery.vmap.sampledata.js"></script>
+    <!-- scripit init-->
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/vector-map/country/jquery.vmap.world.js"></script>
+    <!-- scripit init-->
 
+    <!-- Form validation -->
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/form-validation/jquery.validate.min.js"></script>
+    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/form-validation/jquery.validate-init.js"></script>
+
+    <!-- Data Table -->
     <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/datatables/datatables.min.js"></script>
     <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
-    <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="http://localhost/localhost/bengkuluselatan.baznas/ElaAdmin/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
     <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/datatables/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
     <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
     <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
     <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
     <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
     <script src="<?php echo base_url()."ElaAdmin/"?>js/lib/datatables/datatables-init.js"></script>
+   
+
+</body>
+
+</html>

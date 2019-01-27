@@ -25,10 +25,12 @@ class Login extends CI_Controller {
 				$sess_data['iduser']	 = $data->iduser;
 				$sess_data['status']	 = $data->status;
 				$this->session->set_userdata($sess_data);
-				if($sess_data['status'] == 1){
-					redirect('admadmin');
-				}elseif ($sess_data['status'] == 0) {
+				if($sess_data['status'] == 0){
 					redirect('mcalonmustahik');
+				}elseif ($sess_data['status'] == 1) {
+					redirect('admadminbaznas');
+				}elseif ($sess_data['status'] == 2) {
+					redirect('admadminrsmu');
 				}
 			}
 			

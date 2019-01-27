@@ -28,7 +28,7 @@ class Mcalonmustahik extends CI_Controller {
 			$no++;
 			$row = array();
 			$row[] = $no;
-			$row[] = $field->nama;
+			$row[] = '<a href="mmustahik?nik='.$field->nik.'&&nama='.$field->nama.'">'.$field->nama.'</a>';
 			$row[] = $field->nik;
 			$row[] = $field->jk;
 			$row[] = $field->tempatlahir;

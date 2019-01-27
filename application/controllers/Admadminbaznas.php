@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admadmin extends CI_Controller {
+class Admadminbaznas extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
@@ -13,16 +13,16 @@ class Admadmin extends CI_Controller {
 	}
 	public function index()
 	{
-		$data['content'] = 'admin/beranda';
+		$data['content'] = 'admin/baznas/beranda';
 		$data['email'] = $this->session->userdata('email');
-		$this->load->view('admin/tampilanmenu',$data);
+		$this->load->view('admin/baznas/tampilanmenu',$data);
 	}
 
 	public function laporan()
 	{
-		$data['content'] = 'admin/laporan';
+		$data['content'] = 'admin/baznas/laporan';
 		$data["datamustahik"] = $this->m_admin->getmustahik();
-		$this->load->view('admin/tampilanmenu',$data);
+		$this->load->view('admin/baznas/tampilanmenu',$data);
 	}
 
 	/*function get_data_mustahik()

@@ -55,7 +55,7 @@
                         <!-- Messages -->
                         <li class="nav-item dropdown mega-dropdown"> <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-th-large"></i></a>
                             <div class="dropdown-menu animated zoomIn">
-                                INI ADALAH SISTEM INFORMASI MUSTAHIK BAZNAS KABUPATEN BENGKULU SELATAN, SEGALA BENTUK PENDAFTARAN DILAKUKAN OLEH KELURAHAN/DESA DAN ATAU UNIT PENGUMPUL ZAKAT
+                                HAI INI ADALAH LAYANAN BAZNAS KABUPATEN BENGKULU SELATAN
                                 <!-- <ul class="mega-dropdown-menu row">
                                     <li class="col-lg-3  m-b-30">
                                         <h4 class="m-b-20">CONTACT US</h4>
@@ -176,13 +176,13 @@
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
-                        <li> <a href="<?php echo base_url()?>admadmin/" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard </span></span></a>
+                        <li> <a href="<?php echo base_url()?>admadminbaznas/" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard </span></span></a>
                            
                         </li>
                         <li class="nav-label">Data</li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Laporan</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="<?php echo base_url()?>admadmin/laporan">Mustahik</a></li>
+                                <li><a href="<?php echo base_url()?>admadminbaznas/laporan">Mustahik</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -197,7 +197,7 @@
             <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-primary">WELCOME <?php  echo $this->session->userdata('keldes');?></h3> </div>
+                    <h3 class="text-primary">WELCOME <?php  echo $this->session->userdata('namauser');?></h3> </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
