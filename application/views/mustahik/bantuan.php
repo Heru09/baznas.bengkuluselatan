@@ -123,6 +123,22 @@
                                                                         <option value="5">Dakwah-Advokasi</option>
                                                                     </select>
                                                                 </div>
+                                                                <div class="has-success form-group">
+                                                                    <label for="inputIsInvalid" class=" form-control-label"></label>
+                                                                    <select name="select" id="select" class="form-control">
+                                                                        <option value="0">Program Bidang Ekonomi.....</option>
+                                                                        <option value="1">Zakat Community Development</option>
+                                                                        <option value="2">Program Pemberdayaan Ekonomi</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="has-success form-group">
+                                                                    <label for="inputIsInvalid" class=" form-control-label"></label>
+                                                                    <select name="select" id="select" class="form-control">
+                                                                        <option value="0">Program Bidang Pendidikan.......</option>
+                                                                        <option value="1">Program Beasiswa Pendidikan</option>
+                                                                        <option value="2">Program Pelayanan Pendidikan</option>
+                                                                    </select>
+                                                                </div>
                                                                 <div class="form-actions form-group">
                                                                     <button type="submit" class="btn btn-primary btn-sm">Submit</button>
                                                                 </div>
