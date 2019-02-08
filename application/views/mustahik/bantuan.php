@@ -8,14 +8,20 @@
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs customtab" role="tablist">
                                     <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home2" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Home</span></a> </li>
-                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile2" role="tab" id="getbantuan"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Bantuan</span></a> </li>
-                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#messages2" role="tab" id="getusulan"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Usulan</span></a> </li>
+                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profil" role="tab" id="getprofil"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Profil</span></a> </li>
+                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#bantuan" role="tab" id="getbantuan"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Bantuan</span></a> </li>
+                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#usulan" role="tab" id="getusulan"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Usulan</span></a> </li>
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="home2" role="tabpanel">
                                         <div class="p-20">
-                                            <form>
+                                            Silahkan Pilih Menu yang di Sediakan
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane  p-20" id="profil" role="tabpanel">
+                                        <div class="table-responsive m-t-1">
                                             <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">Nama
                                                 <input type="text" name="nama" id="nama" value="" class="form-control input-default " >
@@ -57,11 +63,11 @@
                                                 <input type="text" name="kec" id="kec" value="" class="form-control input-rounded" >
                                             </div>
                                             <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Hapus</button>
-                                            </form>
-
                                         </div>
                                     </div>
-                                    <div class="tab-pane  p-20" id="profile2" role="tabpanel">
+
+
+                                    <div class="tab-pane  p-20" id="bantuan" role="tabpanel">
                                     <div class="table-responsive m-t-1">
                                     <form class=""  method="POST" >
                                     <table id="table" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
@@ -96,17 +102,27 @@
                                     </form>
                                     </div>
                                     </div>
-                                    <div class="tab-pane p-20" id="messages2" role="tabpanel">
+                                    <div class="tab-pane p-20" id="usulan" role="tabpanel">
                                     <div class="content">
                                         <div class="animated fadeIn">
                                             <div class="row">   
                                                 <div class="col-lg-6">
                                                         <div class="card">
                                                             <div class="card-header">
-                                                                <strong>Pilih</strong> Proposal
+                                                                <strong>Form Pilih Usulan</strong>
                                                             </div>
                                                             <div class="card-body card-block">
-                                                                <div class="has-warning form-group"><label for="inputIsInvalid" class=" form-control-label">Choose One</label><input type="text" id="inputIsInvalid" class="is-invalid form-control"></div>
+                                                                <div class="has-warning form-group">
+                                                                    <label for="inputIsInvalid" class=" form-control-label"></label>
+                                                                    <select name="select" id="select" class="form-control">
+                                                                        <option value="0">Bidang.....</option>
+                                                                        <option value="1">Ekonomi</option>
+                                                                        <option value="2">Pendidikan</option>
+                                                                        <option value="3">Kesehatan</option>
+                                                                        <option value="4">Kemanusiaan</option>
+                                                                        <option value="5">Dakwah-Advokasi</option>
+                                                                    </select>
+                                                                </div>
                                                                 <div class="form-actions form-group">
                                                                     <button type="submit" class="btn btn-primary btn-sm">Submit</button>
                                                                 </div>
@@ -116,10 +132,13 @@
                                                 <div class="col-lg-6">
                                                         <div class="card">
                                                             <div class="card-header">
-                                                                <strong>Usulan</strong><em>(proposal)</em>
+                                                                <strong><em>Form Usulan Yang Dipilih</em></strong>
                                                             </div>
                                                             <div class="card-body card-block">
-                                                                <div class="has-success form-group"><label for="inputSuccess2i" class=" form-control-label">Jenis</label><input type="text" id="inputSuccess2i" class="form-control-success form-control"></div>
+                                                                <div class="has-success form-group">
+                                                                    <label for="inputSuccess2i" class=" form-control-label"></label>
+                                                                    <input type="text" id="inputSuccess2i" class="form-control-success form-control">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                 </div>

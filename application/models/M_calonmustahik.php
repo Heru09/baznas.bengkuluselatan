@@ -1,11 +1,10 @@
 <?php
 
 class M_calonmustahik extends CI_Model {
-
-	var $table = 'calonmustahik'; 
-	var $select  = array('nama','nik','jk','tempatlahir','tanggallahir','alamatlengkap','kec','namauser','iduser','terdaftar'); 
-	var $column_order = array('nama','nik','jk','tempatlahir','tanggallahir','alamatlengkap','kec','namauser','iduser','terdaftar'); 
-	var $column_search = array('nama','nik','jk','tempatlahir','tanggallahir','alamatlengkap','kec','namauser','iduser','terdaftar');
+var $table = 'calonmustahik'; 
+	var $select  = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','terdaftar'); 
+	var $column_order = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','terdaftar'); 
+	var $column_search = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','terdaftar');
 	
 	var $order = array('nama' => 'asc'); 
 
@@ -15,9 +14,9 @@ class M_calonmustahik extends CI_Model {
 		$this->load->database();
 	}
 
-	public function get_datatables($iduser, $namauser)
+	public function get_datatables($iduser)
     {
-        $this->_get_datatables_query($iduser, $namauser);
+        $this->_get_datatables_query($iduser);
        
         if($this->input->post['length'] != -1)
             $this->db->limit($this->input->post['length'], $this->input->post['start']);
@@ -26,9 +25,9 @@ class M_calonmustahik extends CI_Model {
         return $query->result();
     }
 
-    public function count_filtered($iduser, $namauser)
+    public function count_filtered($iduser)
     {
-        $this->_get_datatables_query($iduser, $namauser);
+        $this->_get_datatables_query($iduser);
        
         $query = $this->db->get();
        
@@ -42,14 +41,14 @@ class M_calonmustahik extends CI_Model {
         return $this->db->count_all_results();
     }
 
-    private function _get_datatables_query($iduser, $namauser)
+    private function _get_datatables_query($iduser)
     {
 
         $this->db
              ->select($this->select)
              ->from($this->table);
 
-        if($iduser!='' && $namauser!='') 
+        if($iduser!='') 
         {
 
             $this->db->where('iduser', $iduser);
