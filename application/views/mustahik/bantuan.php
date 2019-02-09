@@ -126,7 +126,7 @@
                                                                 <div class="has-success form-group">
                                                                     <label for="inputIsInvalid" class=" form-control-label"></label>
                                                                     <select name="select" id="select" class="form-control">
-                                                                        <option value="0">Program Bidang Ekonomi.....</option>
+                                                                        <option value="0">Program......</option>
                                                                         <option value="1">Zakat Community Development</option>
                                                                         <option value="2">Program Pemberdayaan Ekonomi</option>
                                                                     </select>
@@ -134,9 +134,13 @@
                                                                 <div class="has-success form-group">
                                                                     <label for="inputIsInvalid" class=" form-control-label"></label>
                                                                     <select name="select" id="select" class="form-control">
-                                                                        <option value="0">Program Bidang Pendidikan.......</option>
-                                                                        <option value="1">Program Beasiswa Pendidikan</option>
-                                                                        <option value="2">Program Pelayanan Pendidikan</option>
+                                                                        <option value="0">Jenis Bantuan....</option>
+                                                                        <option value="1">Zakat ZCD 1</option>
+                                                                        <option value="2">Zakat ZCD 2</option>
+                                                                        <option value="3">Program Modal Usaha</option>
+                                                                        <option value="4">Program Pelatihan Usaha</option>
+                                                                        <option value="5">Koperasi Mustahik</option>
+                                                                        <option value="6">Pemberdayaan Ekonomi</option>
                                                                     </select>
                                                                 </div>
                                                                 <div class="form-actions form-group">
