@@ -42,9 +42,9 @@ class Mbantuan extends CI_Controller {
         echo json_encode($output);
 	}
 
-	function bidangpilih(){
-		if(isset($_POST['idbidang'])){
-			echo ($_POST['idbidang']);
+	function bidang(){
+		if(isset($_POST['value'])){
+			echo ($_POST['value']);
 		}
 	}
 }

@@ -219,19 +219,20 @@
 
 
         $('#bidangpilih').on('click',function(){
-           const getidbidangpilih = document.getElementById("bidangfrm").value
-           
-           var id = $('#getidbidangpilih').val();
 
+           var id = $('#bidangfrm').val();
+           //console.log(id);
+           
            $.ajax({
-                url: '<?php echo base_url('mbantuan/bidangpilih')?>',
+                url: '<?php echo base_url('mbantuan/bidang')?>',
                 type: 'POST',
-                data: {idbidang: $("#id").val()},
+                data: {value: $("#id").val()},
 		        success:function(data){
-		       	 $("#idbidang").html(data);
+		       	 $("#id").html(data);
 		         console.log(data);
 		        }
             });
+   			//return false;
         
         });
         
