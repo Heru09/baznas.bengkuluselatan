@@ -112,17 +112,25 @@
                                                                 <strong>Form Pilih Usulan</strong>
                                                             </div>
                                                             <div class="card-body card-block">
+
+                                                                <form>
                                                                 <div class="has-warning form-group">
                                                                     <label for="inputIsInvalid" class=" form-control-label"></label>
-                                                                    <select name="select" id="select" class="form-control">
+                                                                    <select name="select" id="bidangfrm" class="form-control">
                                                                         <option value="0">Bidang.....</option>
-                                                                        <option value="1">Ekonomi</option>
-                                                                        <option value="2">Pendidikan</option>
-                                                                        <option value="3">Kesehatan</option>
-                                                                        <option value="4">Kemanusiaan</option>
-                                                                        <option value="5">Dakwah-Advokasi</option>
+                                                                        <option value="B1">Ekonomi</option>
+                                                                        <option value="B2">Pendidikan</option>
+                                                                        <option value="B3">Kesehatan</option>
+                                                                        <option value="B4">Dakwah-Advokasi</option>
+                                                                        <option value="B5">Kemanusiaan</option>
                                                                     </select>
                                                                 </div>
+                                                                </form>
+                                                                <div class="form-actions form-group">
+                                                                <button type="button" id="bidangpilih" class="btn btn-danger"><i class="fa fa-rss"></i>&nbsp; Pilih</button>
+                                                                </div>
+                                                                
+
                                                                 <div class="has-success form-group">
                                                                     <label for="inputIsInvalid" class=" form-control-label"></label>
                                                                     <select name="select" id="select" class="form-control">
@@ -131,6 +139,10 @@
                                                                         <option value="2">Program Pemberdayaan Ekonomi</option>
                                                                     </select>
                                                                 </div>
+                                                                <div class="form-actions form-group">
+                                                                <button type="button" class="btn btn-warning"><i class="fa fa-map-marker"></i>&nbsp; Pilih</button>
+                                                                </div>
+
                                                                 <div class="has-success form-group">
                                                                     <label for="inputIsInvalid" class=" form-control-label"></label>
                                                                     <select name="select" id="select" class="form-control">
@@ -144,8 +156,10 @@
                                                                     </select>
                                                                 </div>
                                                                 <div class="form-actions form-group">
-                                                                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                                                                <button type="button" class="btn btn-primary"><i class="fa fa-star"></i>&nbsp; Pilih</button>
+                                                                <button type="button" class="btn btn-secondary"><i class="fa fa-lightbulb-o"></i>&nbsp; Ulang</button>
                                                                 </div>
+
                                                             </div>
                                                         </div>
                                                 </div>
@@ -203,9 +217,24 @@
              }); 
         });
 
-        $('#getusulan').on('click',function(){
-            console.log("Usulan");
+
+        $('#bidangpilih').on('click',function(){
+           const getidbidangpilih = document.getElementById("bidangfrm").value
+           
+           var id = $('#getidbidangpilih').val();
+
+           $.ajax({
+                url: '<?php echo base_url('mbantuan/bidangpilih')?>',
+                type: 'POST',
+                data: {idbidang: $("#id").val()},
+		        success:function(data){
+		       	 $("#idbidang").html(data);
+		         console.log(data);
+		        }
+            });
+        
         });
+        
 
     });
 </script>
