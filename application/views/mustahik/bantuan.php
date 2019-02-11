@@ -224,15 +224,16 @@
            //console.log(id);
            
            $.ajax({
-                url: '<?php echo base_url('mbantuan/bidang')?>',
-                type: 'POST',
+                url: "<?php echo base_url('mbantuan/bidang')?>",
+                type: "POST",
                 data: {value: $("#id").val()},
 		        success:function(data){
 		       	 $("#id").html(data);
 		         console.log(data);
 		        }
+
             });
-   			//return false;
+   			return false;
         
         });
         

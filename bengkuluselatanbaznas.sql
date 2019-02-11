@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: 10 Feb 2019 pada 11.56
+-- Generation Time: 11 Feb 2019 pada 14.14
 -- Versi Server: 5.7.25-0ubuntu0.18.04.2
 -- PHP Version: 7.2.10-0ubuntu0.18.04.1
 
@@ -47,7 +47,8 @@ CREATE TABLE `calonmustahik` (
 --
 
 INSERT INTO `calonmustahik` (`no`, `email`, `iduser`, `nama`, `namapanggilan`, `nik`, `jk`, `tempatlahir`, `tanggallahir`, `agama`, `hp`, `alamatlengkap`, `terdaftar`) VALUES
-(1, 'ekobudiarto@yahoo.com', 'AN3', 'HERU PRASETYO', '', '1701050909940002', 'L', 'PALAK BENGKERUNG', '1994-09-09', 'ISLAM', '0', 'DESA PALAK BENGKERUNG KEC. AIR NIPIS', '2019-01-12');
+(1, 'ekobudiarto@yahoo.com', 'AN3', 'HERU PRASETYO', '', '1701050909940002', 'L', 'PALAK BENGKERUNG', '1994-09-09', 'ISLAM', '0', 'DESA PALAK BENGKERUNG KEC. AIR NIPIS', '2019-01-12'),
+(2, 'baznas.koma.kotamedan@gmail.com', 'KM5', 'HERU PRASETYO', '', '1701050909940002', 'L', 'PALAK BENGKERUNG', '1994-09-09', 'ISLAM', '0', 'JL BLK KEL. KOTA MEDAN KEC. KOTA MANNA', '2019-01-12');
 
 -- --------------------------------------------------------
 
@@ -56,6 +57,7 @@ INSERT INTO `calonmustahik` (`no`, `email`, `iduser`, `nama`, `namapanggilan`, `
 --
 
 CREATE TABLE `mustahik` (
+  `no` int(11) NOT NULL,
   `email` char(50) NOT NULL,
   `iduser` char(12) NOT NULL,
   `nik` char(50) NOT NULL,
@@ -66,6 +68,13 @@ CREATE TABLE `mustahik` (
   `via` tinytext NOT NULL,
   `ket` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `mustahik`
+--
+
+INSERT INTO `mustahik` (`no`, `email`, `iduser`, `nik`, `bantuan`, `satuan`, `rp`, `tgl`, `via`, `ket`) VALUES
+(1, 'ekobudiarto@yahoo.com', 'AN3', '1701050909940002', 'MODAL USAHA', '1', '1.000.000', '2019-02-10', 'KANTOR BAZNAS', '');
 
 -- --------------------------------------------------------
 
@@ -181,6 +190,12 @@ ALTER TABLE `calonmustahik`
   ADD PRIMARY KEY (`no`);
 
 --
+-- Indexes for table `mustahik`
+--
+ALTER TABLE `mustahik`
+  ADD PRIMARY KEY (`no`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -201,6 +216,11 @@ ALTER TABLE `usulanfrm`
 -- AUTO_INCREMENT for table `calonmustahik`
 --
 ALTER TABLE `calonmustahik`
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `mustahik`
+--
+ALTER TABLE `mustahik`
   MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `usulanfrm`

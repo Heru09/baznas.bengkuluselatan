@@ -3,9 +3,9 @@
 class M_bantuan extends CI_Model {
 
 	var $table = 'mustahik'; 
-	var $select  = array('nik','bantuan','satuan','rp','tgl','via','ket'); 
-	var $column_order = array('nik','bantuan','satuan','rp','tgl','via','ket'); 
-	var $column_search = array('nik','bantuan','satuan','rp','tgl','via','ket'); 
+	var $select  = array('email','iduser','nik','bantuan','satuan','rp','tgl','via','ket'); 
+	var $column_order = array('email','iduser','nik','bantuan','satuan','rp','tgl','via','ket'); 
+	var $column_search = array('email','iduser','nik','bantuan','satuan','rp','tgl','via','ket'); 
 	
 	var $order = array('tgl' => 'asc'); 
 
@@ -16,9 +16,9 @@ class M_bantuan extends CI_Model {
 		
 	}
 
-	public function get_datatables($nik)
+	public function get_datatables($nik, $iduser)
     {
-        $this->_get_datatables_query($nik);
+        $this->_get_datatables_query($nik, $iduser);
        
         if($this->input->post['length'] != -1)
             $this->db->limit($this->input->post['length'], $this->input->post['start']);
@@ -27,9 +27,9 @@ class M_bantuan extends CI_Model {
         return $query->result();
     }
 
-    public function count_filtered($nik)
+    public function count_filtered($nik, $iduser)
     {
-        $this->_get_datatables_query($nik);
+        $this->_get_datatables_query($nik, $iduser);
        
         $query = $this->db->get();
        
@@ -43,17 +43,19 @@ class M_bantuan extends CI_Model {
         return $this->db->count_all_results();
     }
 
-    private function _get_datatables_query($nik)
+    private function _get_datatables_query($nik, $iduser)
     {
 
         $this->db
              ->select($this->select)
              ->from($this->table);
 
-        if($nik!='') 
+        if($nik!='' && $iduser!='') 
         {
-
-            $this->db->where('nik', $nik);
+            //$array = array('nik' => $nik, 'iduser' =>$iduser);
+            //$this->db->where($array);
+            //$this->db->where('nik', $nik);
+            $this->db->where('iduser', $iduser);
         }
 
         $i = 0;

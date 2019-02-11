@@ -8,13 +8,15 @@ class Mbantuan extends CI_Controller {
 			redirect('login');
 		}
 		$this->load->helper(array('form', 'url'));
-		$this->load->model('m_bantuan', '', TRUE);
+		$this->load->model('m_bantuan','', TRUE);
 	}
 
 	function get_data_bantuan()
 	{
 		$nik = $this->input->post('nik');
-		$list = $this->m_bantuan->get_datatables($nik);
+		$iduser = $this->session->userdata('iduser');
+
+		$list = $this->m_bantuan->get_datatables($nik, $iduser);
 		$data = array();
 		$no = $this->input->post('start');
 		foreach ($list as $field){
@@ -27,7 +29,7 @@ class Mbantuan extends CI_Controller {
 			$row[] = $field->tgl;
 			$row[] = $field->via;
 			$row[] = $field->nik;
-			$row[] = $field->ket;
+			$row[] = $field->iduser;
 
 			$data[] = $row;
 		}
@@ -35,7 +37,7 @@ class Mbantuan extends CI_Controller {
 		$output = array(
             "draw" => $this->input->post('draw'),
             "recordsTotal" => $this->m_bantuan->count_all(),
-            "recordsFiltered" => $this->m_bantuan->count_filtered($nik),
+            "recordsFiltered" => $this->m_bantuan->count_filtered($nik, $iduser),
             "data" => $data,
         );
    
