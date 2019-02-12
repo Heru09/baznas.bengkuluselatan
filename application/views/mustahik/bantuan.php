@@ -4,7 +4,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body p-b-0">
-                                <h4 class="card-title">Data Mustahik Dan Data Usulan Calon Mustahik</h4>
+                                <h4 class="card-title"><h6 class="m-0 font-weight-bold text-primary"><?php  echo $_GET['nama'];?></h6></h4>
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs customtab" role="tablist">
                                     <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home2" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Home</span></a> </li>
@@ -16,6 +16,7 @@
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="home2" role="tabpanel">
                                         <div class="p-20">
+                                        <input type="hidden" id="nik" name="nik" value="<?php  echo $_GET['nik'];?>">
                                             Silahkan Pilih Menu yang di Sediakan
                                         </div>
                                     </div>
@@ -193,6 +194,9 @@
     $(document).ready(function(){
 
         $('#getbantuan').on('click',function(){
+            
+            var nik = $('#nik').val();
+
             var table;
              table = $('#table').DataTable({ 
                  "processing": true, 
@@ -206,6 +210,7 @@
                     "data":function(data){
                         data.nik = $('#nik').val();
                     }
+                    
                 },
 
                  "columnDefs": [
@@ -218,23 +223,18 @@
         });
 
 
-        $('#bidangpilih').on('click',function(){
-
-           var id = $('#bidangfrm').val();
-           //console.log(id);
-           
-           $.ajax({
-                url: "<?php echo base_url('mbantuan/bidang')?>",
-                type: "POST",
-                data: {value: $("#id").val()},
+        $('#getprofil').on('click',function(){
+            var nik = $('#nik').val();
+			
+			 $.ajax({
+                url: '<?php echo base_url('mbantuan/getprofilmustahik')?>',
+                type: 'POST',
+                data: {nik: $("#nik").val()},
 		        success:function(data){
-		       	 $("#id").html(data);
-		         console.log(data);
+		       	$("#nik").html(data);
+                 console.log(data);
 		        }
-
             });
-   			return false;
-        
         });
         
 

@@ -13,7 +13,8 @@ class Mbantuan extends CI_Controller {
 
 	function get_data_bantuan()
 	{
-		$nik = $this->input->post('nik');
+		
+		$nik = $_POST['nik'];
 		$iduser = $this->session->userdata('iduser');
 
 		$list = $this->m_bantuan->get_datatables($nik, $iduser);
@@ -29,7 +30,7 @@ class Mbantuan extends CI_Controller {
 			$row[] = $field->tgl;
 			$row[] = $field->via;
 			$row[] = $field->nik;
-			$row[] = $field->iduser;
+			$row[] = $field->ket;
 
 			$data[] = $row;
 		}
@@ -44,9 +45,9 @@ class Mbantuan extends CI_Controller {
         echo json_encode($output);
 	}
 
-	function bidang(){
-		if(isset($_POST['value'])){
-			echo ($_POST['value']);
+	function getprofilmustahik(){
+		if(isset($_POST['nik'])){
+			echo ($_POST['nik']);
 		}
 	}
 }

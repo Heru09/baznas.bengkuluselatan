@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: 11 Feb 2019 pada 14.14
--- Versi Server: 5.7.25-0ubuntu0.18.04.2
--- PHP Version: 7.2.10-0ubuntu0.18.04.1
+-- Host: 127.0.0.1
+-- Waktu pembuatan: 12 Feb 2019 pada 08.38
+-- Versi server: 10.1.37-MariaDB
+-- Versi PHP: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -48,7 +50,8 @@ CREATE TABLE `calonmustahik` (
 
 INSERT INTO `calonmustahik` (`no`, `email`, `iduser`, `nama`, `namapanggilan`, `nik`, `jk`, `tempatlahir`, `tanggallahir`, `agama`, `hp`, `alamatlengkap`, `terdaftar`) VALUES
 (1, 'ekobudiarto@yahoo.com', 'AN3', 'HERU PRASETYO', '', '1701050909940002', 'L', 'PALAK BENGKERUNG', '1994-09-09', 'ISLAM', '0', 'DESA PALAK BENGKERUNG KEC. AIR NIPIS', '2019-01-12'),
-(2, 'baznas.koma.kotamedan@gmail.com', 'KM5', 'HERU PRASETYO', '', '1701050909940002', 'L', 'PALAK BENGKERUNG', '1994-09-09', 'ISLAM', '0', 'JL BLK KEL. KOTA MEDAN KEC. KOTA MANNA', '2019-01-12');
+(2, 'baznas.koma.kotamedan@gmail.com', 'KM5', 'HERU PRASETYO', '', '1701050909940002', 'L', 'PALAK BENGKERUNG', '1994-09-09', 'ISLAM', '0', 'JL BLK KEL. KOTA MEDAN KEC. KOTA MANNA', '2019-01-12'),
+(3, 'baznas.koma.kotamedan@gmail.com', 'KM5', 'CAHYO PRAKOSO', 'CAHYO', '1701053107980002', 'L', 'PALAK BENGKERUNG', '1998-07-31', 'ISLAM', '085238138038', 'JL BLK KEL. KOTA MEDAN KEC. KOTA MANNA', '2019-01-12');
 
 -- --------------------------------------------------------
 
@@ -184,49 +187,53 @@ INSERT INTO `usulanfrm` (`no`, `idbidang`, `namabidang`, `idprogram`, `namaprogr
 --
 
 --
--- Indexes for table `calonmustahik`
+-- Indeks untuk tabel `calonmustahik`
 --
 ALTER TABLE `calonmustahik`
   ADD PRIMARY KEY (`no`);
 
 --
--- Indexes for table `mustahik`
+-- Indeks untuk tabel `mustahik`
 --
 ALTER TABLE `mustahik`
   ADD PRIMARY KEY (`no`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`email`);
 
 --
--- Indexes for table `usulanfrm`
+-- Indeks untuk tabel `usulanfrm`
 --
 ALTER TABLE `usulanfrm`
   ADD PRIMARY KEY (`no`),
   ADD UNIQUE KEY `idbantuan` (`idbantuan`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `calonmustahik`
+-- AUTO_INCREMENT untuk tabel `calonmustahik`
 --
 ALTER TABLE `calonmustahik`
-  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
--- AUTO_INCREMENT for table `mustahik`
+-- AUTO_INCREMENT untuk tabel `mustahik`
 --
 ALTER TABLE `mustahik`
   MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
--- AUTO_INCREMENT for table `usulanfrm`
+-- AUTO_INCREMENT untuk tabel `usulanfrm`
 --
 ALTER TABLE `usulanfrm`
   MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
