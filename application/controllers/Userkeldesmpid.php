@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Mpid extends CI_Controller {
+class Userkeldesmpid extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
@@ -9,7 +9,7 @@ class Mpid extends CI_Controller {
 	}
 	public function index()
 	{
-		$data['content'] = 'mustahik/epid';
-		$this->load->view('mustahik/tampilanmenu',$data);
+		$data['content'] = 'user/keldes/epid';
+		$this->load->view('user/keldes/tampilanmenu',$data);
 	}
 }

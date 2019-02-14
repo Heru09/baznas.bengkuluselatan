@@ -121,7 +121,7 @@
             "order": [], 
             
             "ajax": {
-                "url": "<?php echo 'mcalonmustahik/get_data_calonmustahik'?>",
+                "url": "<?php echo 'Userkeldesberanda/get_data_calonmustahik'?>",
                 "type": "POST"
             },
 

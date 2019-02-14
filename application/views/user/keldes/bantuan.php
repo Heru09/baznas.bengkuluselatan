@@ -16,7 +16,9 @@
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="home2" role="tabpanel">
                                         <div class="p-20">
-                                        <input type="hidden" id="nik" name="nik" value="<?php  echo $_GET['nik'];?>">
+                                        <input type="text" id="nik" name="nik" value="<?php  echo $_GET['nik'];?>">
+                                        <input type="text" id="iduser" name="iduser" value="<?php  echo $_GET['iduser'];?>">
+                                        
                                             Silahkan Pilih Menu yang di Sediakan
                                         </div>
                                     </div>
@@ -188,55 +190,50 @@
                     </div>    
                 </div>
             <!-- End Page Content -->
+
 <script src="<?php echo base_url()."ElaAdmin/"?>js/jquery-2.2.3.min.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function(){
 
-        $('#getbantuan').on('click',function(){
-            
-            var nik = $('#nik').val();
-
-            var table;
-             table = $('#table').DataTable({ 
-                 "processing": true, 
-                 "serverSide": true, 
-                 "order": [], 
-                 "destroy": true,
-                "ajax":{
-                    "url": "<?php echo base_url('mbantuan/get_data_bantuan')?>",
-                    "type": "POST",
-                    "dataType": "json",
-                    "data":function(data){
-                        data.nik = $('#nik').val();
-                    }
-                    
-                },
-
-                 "columnDefs": [
-                 { 
-                     "targets": [ 0, 1, 2, 3, 4, 5, 6, 7], 
-                     "orderable": false, 
-                 },
-                 ],
-             }); 
-        });
-
-
         $('#getprofil').on('click',function(){
             var nik = $('#nik').val();
-			
-			 $.ajax({
-                url: '<?php echo base_url('mbantuan/getprofilmustahik')?>',
-                type: 'POST',
-                data: {nik: $("#nik").val()},
-		        success:function(data){
-		       	$("#nik").html(data);
-                 console.log(data);
-		        }
+            var iduser = $('#iduser').val();
+            $.ajax({
+               url: '<?php echo base_url('Userkeldesbantuan/get_data_bantuan')?>',
+               type: 'POST',
+               data:{
+                   nik: $("#nik").val(),
+                   iduser: $("#iduser").val()
+               },
+               success:function(data){
+                $("#nik").html(data);
+                $("#iduser").html(data);
+                console.log(data);
+               }
             });
         });
-        
-
+         
     });
 </script>
+
+<!-- 
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#send').on('click',function(){
+			var name = $('#name').val();
+			var email = $('#email').val();
+			var message = $('#message').val();
+			$.ajax({
+                url: 'process.php',
+                type: 'POST',
+                data: {value: $("#name").val()},
+		        success:function(data){
+		       	 $("#name").html(data);
+		         console.log(data);
+		        }
+            });
+   			return false;
+		});
+	});
+</script> --> 

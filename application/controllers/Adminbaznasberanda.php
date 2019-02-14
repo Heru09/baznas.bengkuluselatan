@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admadminbaznas extends CI_Controller {
+class Adminbaznasberanda extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();

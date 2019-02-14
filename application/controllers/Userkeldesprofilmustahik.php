@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Mmustahik extends CI_Controller {
+class Userkeldesprofilmustahik extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
@@ -11,7 +11,7 @@ class Mmustahik extends CI_Controller {
 	}
 
 	public function index(){
-		$data['content'] = 'mustahik/bantuan';
-		$this->load->view('mustahik/tampilanmenu',$data);
+		$data['content'] = 'user/keldes/bantuan';
+		$this->load->view('user/keldes/tampilanmenu',$data);
 	}
 }

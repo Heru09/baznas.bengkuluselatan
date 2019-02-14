@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Mcalonmustahik extends CI_Controller {
+class Userkeldesberanda extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		if(!$this->session->userdata('email')){
@@ -12,12 +12,11 @@ class Mcalonmustahik extends CI_Controller {
 	}
 
 	public function index(){
-		$data['content'] = 'mustahik/beranda';
-		$this->load->view('mustahik/tampilanmenu',$data);
+		$data['content'] = 'user/keldes/beranda';
+		$this->load->view('user/keldes/tampilanmenu',$data);
 	}
 
-	function get_data_calonmustahik()
-	{
+	function get_data_calonmustahik(){
 		$iduser = $this->session->userdata('iduser');
 		$namauser = $this->session->userdata('namauser');
 
@@ -28,12 +27,12 @@ class Mcalonmustahik extends CI_Controller {
 			$no++;
 			$row = array();
 			$row[] = $no;
-			$row[] = '<a href="mmustahik?nik='.$field->nik.'&&nama='.$field->nama.'">'.$field->nama.'</a>';
+			$row[] = '<a href="userkeldesprofilmustahik?nik='.$field->nik.'&&iduser='.$iduser.'&&nama='.$field->nama.'">'.$field->nama.'</a>';
 			$row[] = $field->nik;
 			$row[] = $field->jk;
 			$row[] = $field->tempatlahir;
 			$row[] = $field->tanggallahir;	
-			$row[] = '<a href="mmustahik?nik='.$field->nik.'&&nama='.$field->nama.'"><button type="button" id="disetujui" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="ti-settings"></i>'.$field->terdaftar.'</button></a>';
+			$row[] = '<a href="userkeldesprofilmustahik?nik='.$field->nik.'&&iduser='.$iduser.'&&nama='.$field->nama.'"><button type="button" id="disetujui" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="ti-settings"></i>'.$field->terdaftar.'</button></a>';
 
 			$data[] = $row;
 		}
@@ -46,5 +45,5 @@ class Mcalonmustahik extends CI_Controller {
         );
    
         echo json_encode($output);
-	}
+	} 
 }
