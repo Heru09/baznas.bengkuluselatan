@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Feb 2019 pada 08.38
+-- Waktu pembuatan: 14 Feb 2019 pada 08.27
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.2.12
 
@@ -49,9 +49,7 @@ CREATE TABLE `calonmustahik` (
 --
 
 INSERT INTO `calonmustahik` (`no`, `email`, `iduser`, `nama`, `namapanggilan`, `nik`, `jk`, `tempatlahir`, `tanggallahir`, `agama`, `hp`, `alamatlengkap`, `terdaftar`) VALUES
-(1, 'ekobudiarto@yahoo.com', 'AN3', 'HERU PRASETYO', '', '1701050909940002', 'L', 'PALAK BENGKERUNG', '1994-09-09', 'ISLAM', '0', 'DESA PALAK BENGKERUNG KEC. AIR NIPIS', '2019-01-12'),
-(2, 'baznas.koma.kotamedan@gmail.com', 'KM5', 'HERU PRASETYO', '', '1701050909940002', 'L', 'PALAK BENGKERUNG', '1994-09-09', 'ISLAM', '0', 'JL BLK KEL. KOTA MEDAN KEC. KOTA MANNA', '2019-01-12'),
-(3, 'baznas.koma.kotamedan@gmail.com', 'KM5', 'CAHYO PRAKOSO', 'CAHYO', '1701053107980002', 'L', 'PALAK BENGKERUNG', '1998-07-31', 'ISLAM', '085238138038', 'JL BLK KEL. KOTA MEDAN KEC. KOTA MANNA', '2019-01-12');
+(3, 'baznas.koma.kotamedan@gmail.com', '1701041013', 'CAHYO PRAKOSO', 'CAHYO', '1701053107980002', 'L', 'PALAK BENGKERUNG', '1998-07-31', 'ISLAM', '085238138038', 'JL BLK KEL. KOTA MEDAN KEC. KOTA MANNA', '2019-01-12');
 
 -- --------------------------------------------------------
 
@@ -71,13 +69,6 @@ CREATE TABLE `mustahik` (
   `via` tinytext NOT NULL,
   `ket` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `mustahik`
---
-
-INSERT INTO `mustahik` (`no`, `email`, `iduser`, `nik`, `bantuan`, `satuan`, `rp`, `tgl`, `via`, `ket`) VALUES
-(1, 'ekobudiarto@yahoo.com', 'AN3', '1701050909940002', 'MODAL USAHA', '1', '1.000.000', '2019-02-10', 'KANTOR BAZNAS', '');
 
 -- --------------------------------------------------------
 
@@ -99,12 +90,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`email`, `password`, `namauser`, `iduser`, `kec`, `status`) VALUES
-('banxpras@gmail.com', '12345', 'HERU PRASETYO ADMIN BAZNAS KABUPATEN BENGKULU SELATAN', '', '', 1),
-('baznas.airnipis.palakbengkerung@gmail.com', '', 'ADMIN DESA PALAK BENGKERUNG', 'AN3', 'AIR NIPIS', 0),
-('baznas.koma.kotamedan@gmail.com', '', 'Kota Medan', 'KM5', 'KOTA MANNA', 0),
-('baznas.rumahsakit.muhammadiyah@gmail.com', '', 'ADMIN RUMAH SAKIT MUHAMMADIYAH KABUPATEN BENGKULU SELATAN', 'rsmu', 'KOTA MANNA', 2),
-('ekobudiarto@yahoo.com', '', 'EKO BUDIARTO ADMIN DESA PALAK BENGKERUNG', 'AN3', 'AIR NIPIS', 0),
-('ritaayuserimpi@gmail.com', '', 'RITA AYU SERIMPI ADMIN RUMAH SAKIT MUHAMMADIYAH KABUPATEN BENGKULU SELATAN', 'RSMU', 'KOTA MANNA', 2);
+('baznas.koma.kotamedan@gmail.com', '', 'KEL KOTA MEDAN', '1701041013', 'KOTA MANNA', 0);
 
 -- --------------------------------------------------------
 
@@ -225,7 +211,7 @@ ALTER TABLE `calonmustahik`
 -- AUTO_INCREMENT untuk tabel `mustahik`
 --
 ALTER TABLE `mustahik`
-  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `usulanfrm`
