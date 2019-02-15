@@ -8,7 +8,7 @@ class Userkeldesberanda extends CI_Controller {
 			redirect('login');
 		}
 		$this->load->helper(array('form', 'url'));
-		$this->load->model('m_calonmustahik', '', TRUE);
+		$this->load->model('Muserkeldesberanda', '', TRUE);
 	}
 
 	public function index(){
@@ -20,7 +20,7 @@ class Userkeldesberanda extends CI_Controller {
 		$iduser = $this->session->userdata('iduser');
 		$namauser = $this->session->userdata('namauser');
 
-		$list = $this->m_calonmustahik->get_datatables($iduser);
+		$list = $this->Muserkeldesberanda->get_datatables($iduser);
 		$data = array();
 		$no = $this->input->post('start');
 		foreach ($list as $field){
@@ -39,8 +39,8 @@ class Userkeldesberanda extends CI_Controller {
 
 		$output = array(
             "draw" => $this->input->post('draw'),
-            "recordsTotal" => $this->m_calonmustahik->count_all(),
-            "recordsFiltered" => $this->m_calonmustahik->count_filtered($iduser),
+            "recordsTotal" => $this->Muserkeldesberanda->count_all(),
+            "recordsFiltered" => $this->Muserkeldesberanda->count_filtered($iduser),
             "data" => $data,
         );
    

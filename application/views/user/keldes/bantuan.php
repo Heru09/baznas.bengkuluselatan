@@ -16,54 +16,58 @@
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="home2" role="tabpanel">
                                         <div class="p-20">
-                                        <input type="text" id="nik" name="nik" value="<?php  echo $_GET['nik'];?>">
-                                        <input type="text" id="iduser" name="iduser" value="<?php  echo $_GET['iduser'];?>">
+                                        <input type="hidden" id="getnik" name="getnik" value="<?php  echo $_GET['nik'];?>">
+                                        <input type="hidden" id="getiduser" name="getiduser" value="<?php  echo $_GET['iduser'];?>">
                                         
                                             Silahkan Pilih Menu yang di Sediakan
                                         </div>
                                     </div>
 
-                                    <div class="tab-pane  p-20" id="profil" role="tabpanel">
+                                    <div class="tab-pane  p-20" id="profil" role="tabpanel">                             
                                         <div class="table-responsive m-t-1">
                                             <div class="form-group">
-                                                <p class="text-muted m-b-15 f-s-12">Nama
-                                                <input type="text" name="nama" id="nama" value="" class="form-control input-default " >
+                                                <p class="text-muted m-b-15 f-s-12">KK
+                                                <input type="text" name="kk" id="kk" class="form-control input-default " >
+                                            </div>
+                                            <div class="form-group">
+                                                <p class="text-muted m-b-15 f-s-12">Nama Asli
+                                                <input type="text" name="namaasli" id="namaasli" class="form-control input-rounded" >
                                             </div>
                                             <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">Nama Panggilan
-                                                <input type="text" name="nik" id="nik" value="" class="form-control input-rounded" >
+                                                <input type="text" name="namapanggilan" id="namapanggilan" class="form-control input-rounded" >
                                             </div>
                                             <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">NIK
-                                                <input type="text" name="kec" id="kec" value="" class="form-control input-focus" >
+                                                <input type="text" name="nik" id="nik" class="form-control input-focus" >
                                             </div>
                                             <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">Jenis Kelamin
-                                                <input type="text" name="kec" id="kec" value="" class="form-control input-rounded" >
+                                                <input type="text" name="jk" id="jk" class="form-control input-rounded" >
                                             </div>
                                             <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">Tempat Lahir
-                                                <input type="text" name="kec" id="kec" value="" class="form-control input-rounded" >
+                                                <input type="text" name="tempatlahir" id="tempatlahir" class="form-control input-rounded" >
                                             </div>
                                             <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">Tanggal Lahir
-                                                <input type="text" name="kec" id="kec" value="" class="form-control input-rounded" >
+                                                <input type="text" name="tanggallahir" id="tanggallahir" class="form-control input-rounded" >
                                             </div>
                                             <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">Agama
-                                                <input type="text" name="kec" id="kec" value="" class="form-control input-rounded" >
+                                                <input type="text" name="agama" id="agama" class="form-control input-rounded" >
                                             </div>
                                             <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">HP
-                                                <input type="text" name="kec" id="kec" value="" class="form-control input-rounded" >
+                                                <input type="text" name="hp" id="hp" class="form-control input-rounded" >
                                             </div>
                                             <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">Alamat
-                                                <input type="text" name="kec" id="kec" value="" class="form-control input-rounded" >
+                                                <input type="text" name="alamatlengkap" id="alamatlengkap" class="form-control input-rounded" >
                                             </div>
                                             <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">Terdaftar
-                                                <input type="text" name="kec" id="kec" value="" class="form-control input-rounded" >
+                                                <input type="text" name="terdaftar" id="terdaftar" class="form-control input-rounded" >
                                             </div>
                                             <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Hapus</button>
                                         </div>
@@ -71,7 +75,7 @@
 
 
                                     <div class="tab-pane  p-20" id="bantuan" role="tabpanel">
-                                    <div class="table-responsive m-t-1">
+                                    <div class="table">
                                     <form class=""  method="POST" >
                                     <table id="table" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
@@ -197,18 +201,28 @@
     $(document).ready(function(){
 
         $('#getprofil').on('click',function(){
-            var nik = $('#nik').val();
-            var iduser = $('#iduser').val();
+            var getnik = $('#getnik').val();
+            var getiduser = $('#getiduser').val();
             $.ajax({
-               url: '<?php echo base_url('Userkeldesbantuan/get_data_bantuan')?>',
+               url: '<?php echo base_url('Userkeldesprofilmustahik/get_profile')?>',
                type: 'POST',
                data:{
-                   nik: $("#nik").val(),
-                   iduser: $("#iduser").val()
+                   getnik: $("#getnik").val(),
+                   getiduser: $("#getiduser").val()
                },
                success:function(data){
-                $("#nik").html(data);
-                $("#iduser").html(data);
+                var parsedData = JSON.parse(data);
+                document.getElementById("kk").value = parsedData.kk;
+                document.getElementById("namaasli").value = parsedData.nama;
+                document.getElementById("namapanggilan").value = parsedData.namapanggilan;
+                document.getElementById("nik").value = parsedData.nik;
+                document.getElementById("jk").value = parsedData.jk;
+                document.getElementById("tempatlahir").value = parsedData.tempatlahir;
+                document.getElementById("tanggallahir").value = parsedData.tanggallahir;
+                document.getElementById("agama").value = parsedData.agama;
+                document.getElementById("hp").value = parsedData.hp;
+                document.getElementById("alamatlengkap").value = parsedData.alamatlengkap;
+                document.getElementById("terdaftar").value = parsedData.terdaftar;
                 console.log(data);
                }
             });
@@ -216,24 +230,3 @@
          
     });
 </script>
-
-<!-- 
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#send').on('click',function(){
-			var name = $('#name').val();
-			var email = $('#email').val();
-			var message = $('#message').val();
-			$.ajax({
-                url: 'process.php',
-                type: 'POST',
-                data: {value: $("#name").val()},
-		        success:function(data){
-		       	 $("#name").html(data);
-		         console.log(data);
-		        }
-            });
-   			return false;
-		});
-	});
-</script> --> 

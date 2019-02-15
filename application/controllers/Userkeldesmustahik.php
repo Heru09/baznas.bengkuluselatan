@@ -9,17 +9,5 @@ class Userkeldesbantuan extends CI_Controller {
 		}
 		$this->load->helper(array('form', 'url'));
 		$this->load->model('m_mustahik','', TRUE);
-	}
-
-	function get_data_bantuan()
-	{
- 
-		$nik = ($_POST['nik']);
-		$iduser = ($_POST['iduser']);
-		echo ($_POST['nik']);
-		echo ($_POST['iduser']);
-		echo "bantuan";
-	}
-
-	
+	}	
 }

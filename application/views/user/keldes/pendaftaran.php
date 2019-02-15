@@ -6,9 +6,15 @@
                                 <div class="basic-form">
                                 <form>                
                                         <div class="form-group">
-                                            <p class="text-muted m-b-15 f-s-12">NAMA ASLI</p>
+                                            <p class="text-muted m-b-15 f-s-12">NO. KK/ NO. DOMISILI<code> No domisili dari kepala desa jika tidak mempunyai Kartu Keluarga</code></p>
                                             <div class="input-group input-group-default">
-                                                <input type="text" name="nama" id="nama" placeholder="BEIT AZRI" name="Search" class="form-control" required>
+                                                <input type="text" name="nama" id="nama" placeholder="170105*****" name="Search" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <p class="text-muted m-b-15 f-s-12">NAMA ASLI<code> Nama Asli Sesuai KK</code></p>
+                                            <div class="input-group input-group-default">
+                                                <input type="text" name="panggilan" id="panggilan" placeholder="BEIT AZRI" name="Search" class="form-control" required>
                                             </div>
                                         </div>
                                          <div class="form-group">
@@ -21,7 +27,7 @@
                                             <p class="text-muted m-b-15 f-s-12">NIK / NO. DOMISILI<code> No domisili dari kepala desa jika tidak mempunyai Kartu Keluarga</code></p>
                                             <div class="input-group input-group-default">
                                             <span class="input-group-btn"><button name="ceknik" id="ceknik" class="btn btn-primary"><i class="ti-search"></i></button></span>
-                                                <input type="text" name="nik" id="nik" placeholder="170102090900000001" name="Search" class="form-control" required>
+                                                <input type="text" name="nik" id="nik" placeholder="170102***" name="Search" class="form-control" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
