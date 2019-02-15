@@ -24,6 +24,7 @@
                                     </div>
 
                                     <div class="tab-pane  p-20" id="profil" role="tabpanel">                             
+                                        <!-- .table responsive -->
                                         <div class="table-responsive m-t-1">
                                             <div class="form-group">
                                                 <p class="text-muted m-b-15 f-s-12">KK
@@ -70,46 +71,49 @@
                                                 <input type="text" name="terdaftar" id="terdaftar" class="form-control input-rounded" >
                                             </div>
                                             <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Hapus</button>
-                                        </div>
+                                        </div><!-- .End table responsive -->
                                     </div>
 
 
                                     <div class="tab-pane  p-20" id="bantuan" role="tabpanel">
+                                    <!-- .table responsive -->
                                     <div class="table">
-                                    <form class=""  method="POST" >
-                                    <table id="table" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
-                                        <thead>
-                                            <tr>
-                                                <th>NO</th>
-                                                <th>BANTUAN</th>
-                                                <th>SATUAN</th>
-                                                <th>RP</th>
-                                                <th>TANGGAL</th>
-                                                <th>VIA</th>
-                                                <th>NIK</th>
-                                                <th>KET</th>
-                                            </tr>
-                                        </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>NO</th>
-                                                <th>BANTUAN</th>
-                                                <th>SATUAN</th>
-                                                <th>RP</th>
-                                                <th>TANGGAL</th>
-                                                <th>VIA</th>
-                                                <th>NIK</th>
-                                                <th>KET</th>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody id="table">
-                                            
-                                        </tbody> 
-                                    </table>
-                                    </form>
-                                    </div>
+                                        <form class=""  method="POST" >
+                                        <table id="table" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>NO</th>
+                                                    <th>BANTUAN</th>
+                                                    <th>SATUAN</th>
+                                                    <th>RP</th>
+                                                    <th>TANGGAL</th>
+                                                    <th>VIA</th>
+                                                    <th>NIK</th>
+                                                    <th>KET</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>NO</th>
+                                                    <th>BANTUAN</th>
+                                                    <th>SATUAN</th>
+                                                    <th>RP</th>
+                                                    <th>TANGGAL</th>
+                                                    <th>VIA</th>
+                                                    <th>NIK</th>
+                                                    <th>KET</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody id="table">
+                                                
+                                            </tbody> 
+                                        </table>
+                                        </form>
+                                    </div><!-- .End table responsive -->
                                     </div>
                                     <div class="tab-pane p-20" id="usulan" role="tabpanel">
+                                    <!-- .table responsive -->
+                                    <div class="table">
                                     <div class="content">
                                         <div class="animated fadeIn">
                                             <div class="row">   
@@ -186,7 +190,7 @@
                                             </div>
                                         </div><!-- .animated -->
                                     </div><!-- .content -->
-                                    
+                                    </div><!-- .End table responsive -->
                                     </div>
                                 </div>
                             </div>
@@ -224,6 +228,22 @@
                 document.getElementById("alamatlengkap").value = parsedData.alamatlengkap;
                 document.getElementById("terdaftar").value = parsedData.terdaftar;
                 console.log(data);
+               }
+            });
+        });
+
+        $('#getbantuan').on('click',function(){
+            var getnik = $('#getnik').val();
+            var getiduser = $('#getiduser').val();
+            $.ajax({
+               url: '<?php echo base_url('Userkeldesbantuanmustahik/get_bantuan')?>',
+               type: 'POST',
+               data:{
+                   getnik: $("#getnik").val(),
+                   getiduser: $("#getiduser").val()
+               },
+               success:function(data){
+                    console.log(data);    
                }
             });
         });
