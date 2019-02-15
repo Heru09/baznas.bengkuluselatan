@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 14 Feb 2019 pada 08.27
+-- Waktu pembuatan: 15 Feb 2019 pada 03.48
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.2.12
 
@@ -32,6 +32,7 @@ CREATE TABLE `calonmustahik` (
   `no` int(11) NOT NULL,
   `email` char(50) NOT NULL,
   `iduser` char(12) NOT NULL,
+  `kk` char(50) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `namapanggilan` tinytext NOT NULL,
   `nik` char(50) NOT NULL,
@@ -48,8 +49,9 @@ CREATE TABLE `calonmustahik` (
 -- Dumping data untuk tabel `calonmustahik`
 --
 
-INSERT INTO `calonmustahik` (`no`, `email`, `iduser`, `nama`, `namapanggilan`, `nik`, `jk`, `tempatlahir`, `tanggallahir`, `agama`, `hp`, `alamatlengkap`, `terdaftar`) VALUES
-(3, 'baznas.koma.kotamedan@gmail.com', '1701041013', 'CAHYO PRAKOSO', 'CAHYO', '1701053107980002', 'L', 'PALAK BENGKERUNG', '1998-07-31', 'ISLAM', '085238138038', 'JL BLK KEL. KOTA MEDAN KEC. KOTA MANNA', '2019-01-12');
+INSERT INTO `calonmustahik` (`no`, `email`, `iduser`, `kk`, `nama`, `namapanggilan`, `nik`, `jk`, `tempatlahir`, `tanggallahir`, `agama`, `hp`, `alamatlengkap`, `terdaftar`) VALUES
+(6, 'baznas.airnipis.maras@gmail.com', '1701051003', '1701082212110003', 'REDHO ABDI', 'REDHO', '1701081210070001', 'L', 'MARAS', '2007-10-12', 'ISLAM', '', 'DESA MARAS KEC. AIR NIPIS', '2019-02-15'),
+(7, 'baznas.airnipis.palakbengkerung@gmail.com', '1701051006', '1701081805160001', 'SAHARIA', 'NDUK IMI', '1701086701470002', 'P', 'MUARA TIGA', '1947-01-27', 'ISLAM', '', 'DESA PALAK BENGKERUNG KEC. AIR NIPIS', '2019-02-15');
 
 -- --------------------------------------------------------
 
@@ -90,7 +92,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`email`, `password`, `namauser`, `iduser`, `kec`, `status`) VALUES
-('baznas.koma.kotamedan@gmail.com', '', 'KEL KOTA MEDAN', '1701041013', 'KOTA MANNA', 0);
+('baznas.airnipis.maras@gmail.com', '', 'DESA AIR NIPIS', '1701051003', 'AIR NIPIS', 0),
+('baznas.airnipis.palakbengkerung@gmail.com', '', 'DESA PALAK BENGKERUNG', '1701051006', 'AIR NIPIS', 0);
 
 -- --------------------------------------------------------
 
@@ -205,7 +208,7 @@ ALTER TABLE `usulanfrm`
 -- AUTO_INCREMENT untuk tabel `calonmustahik`
 --
 ALTER TABLE `calonmustahik`
-  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `mustahik`
