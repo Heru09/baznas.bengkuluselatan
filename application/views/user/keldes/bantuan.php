@@ -18,6 +18,7 @@
                                         <div class="p-20">
                                         <input type="hidden" id="getnik" name="getnik" value="<?php  echo $_GET['nik'];?>">
                                         <input type="hidden" id="getiduser" name="getiduser" value="<?php  echo $_GET['iduser'];?>">
+                                        <input type="hidden" id="getnama" name="getnama" value="<?php  echo $_GET['nama'];?>">
                                         
                                             Silahkan Pilih Menu yang di Sediakan
                                         </div>
@@ -79,7 +80,7 @@
                                     <!-- .table responsive -->
                                     <div class="table">
                                         <form class=""  method="POST" >
-                                        <table id="table" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                        <table id="tablemustahik" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                             <thead>
                                                 <tr>
                                                     <th>NO</th>
@@ -104,9 +105,9 @@
                                                     <th>KET</th>
                                                 </tr>
                                             </tfoot>
-                                            <tbody id="table">
+                                             <!-- <tbody id="tablemustahik">
                                                 
-                                            </tbody> 
+                                             </tbody>  -->
                                         </table>
                                         </form>
                                     </div><!-- .End table responsive -->
@@ -199,7 +200,9 @@
                 </div>
             <!-- End Page Content -->
 
-<script src="<?php echo base_url()."ElaAdmin/"?>js/jquery-2.2.3.min.js"></script>
+<!-- <script src="<?php echo base_url()."ElaAdmin/"?>js/jquery-2.2.3.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="<?php echo base_url()."ElaAdmin/"?>js/jquery.dataTables.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function(){
@@ -207,6 +210,8 @@
         $('#getprofil').on('click',function(){
             var getnik = $('#getnik').val();
             var getiduser = $('#getiduser').val();
+            var getnama = $('#getnama').val();
+
             $.ajax({
                url: '<?php echo base_url('Userkeldesprofilmustahik/get_profile')?>',
                type: 'POST',
@@ -216,18 +221,26 @@
                },
                success:function(data){
                 var parsedData = JSON.parse(data);
-                document.getElementById("kk").value = parsedData.kk;
-                document.getElementById("namaasli").value = parsedData.nama;
-                document.getElementById("namapanggilan").value = parsedData.namapanggilan;
-                document.getElementById("nik").value = parsedData.nik;
-                document.getElementById("jk").value = parsedData.jk;
-                document.getElementById("tempatlahir").value = parsedData.tempatlahir;
-                document.getElementById("tanggallahir").value = parsedData.tanggallahir;
-                document.getElementById("agama").value = parsedData.agama;
-                document.getElementById("hp").value = parsedData.hp;
-                document.getElementById("alamatlengkap").value = parsedData.alamatlengkap;
-                document.getElementById("terdaftar").value = parsedData.terdaftar;
-                console.log(data);
+                var ceknik = parsedData.nik;
+                var ceknama = parsedData.nama;
+
+                 if(ceknik == getnik && ceknama == getnama){
+                    console.log("From Database :"+ceknik + " From URL: " +getnik+" From Database: "+ceknama +" From URL :"+getnama);
+                    document.getElementById("kk").value = parsedData.kk;
+                    document.getElementById("namaasli").value = parsedData.nama;
+                    document.getElementById("namapanggilan").value = parsedData.namapanggilan;
+                    document.getElementById("nik").value = parsedData.nik;
+                    document.getElementById("jk").value = parsedData.jk;
+                    document.getElementById("tempatlahir").value = parsedData.tempatlahir;
+                    document.getElementById("tanggallahir").value = parsedData.tanggallahir;
+                    document.getElementById("agama").value = parsedData.agama;
+                    document.getElementById("hp").value = parsedData.hp;
+                    document.getElementById("alamatlengkap").value = parsedData.alamatlengkap;
+                    document.getElementById("terdaftar").value = parsedData.terdaftar;
+                    console.log(data);
+                 }else{
+                     alert("085-238-138-038 W.A Kami, Portal Bermasalah");
+                 }
                }
             });
         });
@@ -235,6 +248,7 @@
         $('#getbantuan').on('click',function(){
             var getnik = $('#getnik').val();
             var getiduser = $('#getiduser').val();
+
             $.ajax({
                url: '<?php echo base_url('Userkeldesbantuanmustahik/get_bantuan')?>',
                type: 'POST',
@@ -243,9 +257,24 @@
                    getiduser: $("#getiduser").val()
                },
                success:function(data){
-                    console.log(data);    
+                console.log(data); 
+                $('#tablemustahik').DataTable( {
+                    "destroy": true,
+                    "columns": [
+                        { "data": "no" },
+                        { "data": "nik" },
+                        { "data": "bantuan" },
+                        { "data": "satuan" },
+                        { "data": "rp" },
+                        { "data": "tgl" },
+                        { "data": "via" },
+                        { "data": "ket" }
+                    ]
+                } );
+               
                }
             });
+
         });
          
     });
