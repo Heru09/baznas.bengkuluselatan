@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Feb 2019 pada 03.48
+-- Waktu pembuatan: 20 Feb 2019 pada 04.07
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.2.12
 
@@ -51,7 +51,8 @@ CREATE TABLE `calonmustahik` (
 
 INSERT INTO `calonmustahik` (`no`, `email`, `iduser`, `kk`, `nama`, `namapanggilan`, `nik`, `jk`, `tempatlahir`, `tanggallahir`, `agama`, `hp`, `alamatlengkap`, `terdaftar`) VALUES
 (6, 'baznas.airnipis.maras@gmail.com', '1701051003', '1701082212110003', 'REDHO ABDI', 'REDHO', '1701081210070001', 'L', 'MARAS', '2007-10-12', 'ISLAM', '', 'DESA MARAS KEC. AIR NIPIS', '2019-02-15'),
-(7, 'baznas.airnipis.palakbengkerung@gmail.com', '1701051006', '1701081805160001', 'SAHARIA', 'NDUK IMI', '1701086701470002', 'P', 'MUARA TIGA', '1947-01-27', 'ISLAM', '', 'DESA PALAK BENGKERUNG KEC. AIR NIPIS', '2019-02-15');
+(7, 'baznas.airnipis.palakbengkerung@gmail.com', '1701051006', '1701081805160001', 'SAHARIA', 'NDUK IMI', '1701086701470002', 'P', 'MUARA TIGA', '1947-01-27', 'ISLAM', '085238138038', 'DESA PALAK BENGKERUNG KEC. AIR NIPIS', '2019-02-15'),
+(8, 'baznas.airnipis.palakbengkerung@gmail.com', '1701051006', '1701082212110003', 'REDHO ABDI', 'REDHO', '1701081210070001', 'L', 'MARAS', '2007-10-12', 'ISLAM', '', 'DESA PALAK BENGKERUNG KEC. AIR NIPIS', '2019-02-15');
 
 -- --------------------------------------------------------
 
@@ -71,6 +72,15 @@ CREATE TABLE `mustahik` (
   `via` tinytext NOT NULL,
   `ket` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `mustahik`
+--
+
+INSERT INTO `mustahik` (`no`, `email`, `iduser`, `nik`, `bantuan`, `satuan`, `rp`, `tgl`, `via`, `ket`) VALUES
+(1, 'baznas.airnipis.maras@gmail.com', '1701051003', '1701081210070001', 'BANTUAN PENDIDIKAN', '', '300.000', '2019-02-15', 'KANTOR BAZNAS', ''),
+(2, 'baznas.airnipis.maras@gmail.com', '1701051003', '1701081210070001', 'BANTUAN PENDIDIKAN', '', '300.000', '2019-02-18', 'KANTOR BAZNAS', ''),
+(3, 'baznas.airnipis.palakbengkerung@gmail.com', '1701051006', '1701086701470002', 'BANTUAN LANSIA', '', '300.000', '2019-02-19', 'KANTOR BAZNAS', '');
 
 -- --------------------------------------------------------
 
@@ -208,13 +218,13 @@ ALTER TABLE `usulanfrm`
 -- AUTO_INCREMENT untuk tabel `calonmustahik`
 --
 ALTER TABLE `calonmustahik`
-  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `mustahik`
 --
 ALTER TABLE `mustahik`
-  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `usulanfrm`

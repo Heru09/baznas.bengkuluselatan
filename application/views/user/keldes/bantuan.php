@@ -200,9 +200,7 @@
                 </div>
             <!-- End Page Content -->
 
-<!-- <script src="<?php echo base_url()."ElaAdmin/"?>js/jquery-2.2.3.min.js"></script> -->
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="<?php echo base_url()."ElaAdmin/"?>js/jquery.dataTables.js"></script>
+<script src="<?php echo base_url()."ElaAdmin/"?>js/jquery-2.2.3.min.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function(){
@@ -246,35 +244,35 @@
         });
 
         $('#getbantuan').on('click',function(){
-            var getnik = $('#getnik').val();
-            var getiduser = $('#getiduser').val();
+            var table;
+            table = $('#tablemustahik').DataTable({ 
 
-            $.ajax({
-               url: '<?php echo base_url('Userkeldesbantuanmustahik/get_bantuan')?>',
-               type: 'POST',
-               data:{
-                   getnik: $("#getnik").val(),
-                   getiduser: $("#getiduser").val()
-               },
-               success:function(data){
-                console.log(data); 
-                $('#tablemustahik').DataTable( {
-                    "destroy": true,
-                    "columns": [
-                        { "data": "no" },
-                        { "data": "nik" },
-                        { "data": "bantuan" },
-                        { "data": "satuan" },
-                        { "data": "rp" },
-                        { "data": "tgl" },
-                        { "data": "via" },
-                        { "data": "ket" }
-                    ]
-                } );
-               
-               }
+            "processing": true, 
+            "serverSide": true, 
+            "order": [], 
+            "destroy": true,
+
+            "ajax": {
+                "url": "<?php echo 'Userkeldesbantuanmustahik/get_bantuan'?>",
+                "type": "POST",
+                "data": function(data){
+                    data.getnik = $("#getnik").val();
+                    data.getiduser = $('#getiduser').val();
+                }
+            },
+
+            "columns": 
+            [
+                { "data": "no" },
+                { "data": "bantuan" },
+                { "data": "satuan" },
+                { "data": "rp" },
+                { "data": "tgl" },
+                { "data": "via" },
+                { "data": "nik" },
+                { "data": "ket" }
+            ]
             });
-
         });
          
     });

@@ -19,7 +19,7 @@ class Userkeldesbantuanmustahik extends CI_Controller {
 
 	function get_bantuan(){
         $getnik = $_POST["getnik"];
-        $getiduser = $_POST["getiduser"];
+		$getiduser = $_POST["getiduser"];
 		$getdatabantuan = array();
 		$getdatabantuan["data"] = array();
 		$no = 1;
@@ -37,13 +37,5 @@ class Userkeldesbantuanmustahik extends CI_Controller {
 			
 		 }
 		 echo json_encode($getdatabantuan);  
-
-		/* {
-			"data":
-			[
-				{"nik":"1701081210070001","bantuan":"BANTUAN PENDIDIKAN","satuan":"","rp":"300.000","tgl":"2019-02-15","via":"KANTOR BAZNAS","ket":""},
-				{"nik":"1701081210070001","bantuan":"BANTUAN PENDIDIKAN","satuan":"","rp":"300.000","tgl":"2019-02-18","via":"KANTOR BAZNAS","ket":""}
-			]
-		} */
 	}
 }

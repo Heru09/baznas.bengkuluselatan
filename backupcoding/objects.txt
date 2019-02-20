@@ -1,0 +1,7 @@
+{
+  "data":
+  [
+    {"no":1,"nik":"1701081210070001","bantuan":"BANTUAN PENDIDIKAN","satuan":"","rp":"300.000","tgl":"2019-02-15","via":"KANTOR BAZNAS","ket":""},
+    {"no":2,"nik":"1701081210070001","bantuan":"BANTUAN PENDIDIKAN","satuan":"","rp":"300.000","tgl":"2019-02-18","via":"KANTOR BAZNAS","ket":""}
+  ]
+}
