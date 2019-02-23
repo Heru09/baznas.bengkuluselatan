@@ -1,3 +1,10 @@
+<script>
+function populate(s1,s2){
+    var s1 = document.getElementById(s1);
+	var s2 = document.getElementById(s2);
+console.log(s1);
+}
+</script>
 <!-- Start Page Content -->
                 <div class="row">
                     
@@ -128,7 +135,7 @@
                                                                 <form>
                                                                 <div class="has-warning form-group">
                                                                     <label for="inputIsInvalid" class=" form-control-label"></label>
-                                                                    <select name="select" id="bidangfrm" class="form-control">
+                                                                    <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')" class="form-control">
                                                                         <option value="0">Bidang.....</option>
                                                                         <option value="B1">Ekonomi</option>
                                                                         <option value="B2">Pendidikan</option>
@@ -273,6 +280,10 @@
                 { "data": "ket" }
             ]
             });
+        });
+
+        $('#bidangfrm').on('click',function(){
+                console.log("Y");
         });
          
     });

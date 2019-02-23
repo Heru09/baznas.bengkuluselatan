@@ -65,9 +65,9 @@
                                     <div class="register-link m-t-15 text-center">
                                         <p>DATA USER CLICK <a href="<?php echo base_url()?>userdata">Here</a></p>
                                     </div>
-                                    <div class="register-link m-t-15 text-center">
+                                    <!-- <div class="register-link m-t-15 text-center">
                                         <p>LAPORAN CLICK <a href="<?php echo base_url()?>laporan">Here</a></p>
-                                    </div>
+                                    </div> -->
                                 </form>
                             </div>
                         </div>
