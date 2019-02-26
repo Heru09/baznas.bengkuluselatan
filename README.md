@@ -1,2 +1,5 @@
 # baznas.bengkuluselatan
-Sudah memakai server di linux dan windows
+1. Sudah memakai server di linux dan windows
+2. Menggunakan Ajax
+3. Datatable
+4. Server Side Datatable
