@@ -1,0 +1,323 @@
+[
+    {
+        "id": "1",
+        "nama": "BIDANG EKONOMI",
+        "parent_id":"0"
+    },
+    {
+        "id": "2",
+        "nama": "BIDANG PENDIDIKAN",
+        "parent_id":"0"
+    },
+    {
+        "id": "3",
+        "nama": "BIDANG KESEHATAN",
+        "parent_id":"0"
+    },
+    {
+        "id": "4",
+        "nama": "BIDANG DAKWAH ADVOKASI",
+        "parent_id":"0"
+    },
+    {
+        "id": "5",
+        "nama": "BIDANG KEMANUSIAAN",
+        "parent_id":"0"
+    },
+    {
+        "id": "6",
+        "nama": "Zakat Community Development",
+        "parent_id":"1"
+    },
+    {
+        "id": "7",
+        "nama": "Program Pemberdayaan Ekonomi",
+        "parent_id":"1"
+    },
+    {
+        "id": "8",
+        "nama": "Program Beasiswa Pendidikan",
+        "parent_id":"2"
+    },
+    {
+        "id": "9",
+        "nama": "Program Pelayanan Pendidikan",
+        "parent_id":"2"
+    },
+    {
+        "id": "10",
+        "nama": "Program Pelayanan Kesehatan",
+        "parent_id":"3"
+    },
+    {
+        "id": "11",
+        "nama": "Rumah Sehat BAZNAS",
+        "parent_id":"3"
+    },
+    {
+        "id": "12",
+        "nama": "Program Pelayanan Dakwah",
+        "parent_id":"4"
+    },
+    {
+        "id": "13",
+        "nama": "Program Pelayanan Kemanusiaan",
+        "parent_id":"5"
+    },
+    {
+        "id": "14",
+        "nama": "Program Modal Usaha",
+        "parent_id":"7"
+    },
+    {
+        "id": "15",
+        "nama": "Program Pelatihan Usaha",
+        "parent_id":"7"
+    },
+    {
+        "id": "16",
+        "nama": "Pemberdayaan Ekonomi",
+        "parent_id":"7"
+    },
+    {
+        "id": "17",
+        "nama": "Beasiswa SD/MI",
+        "parent_id":"8"
+    },
+    {
+        "id": "18",
+        "nama": "Beasiswa SMP/MTS",
+        "parent_id":"8"
+    },
+    {
+        "id": "19",
+        "nama": "Beasiswa SMA/MA",
+        "parent_id":"8"
+    },
+    {
+        "id": "20",
+        "nama": "Beasiswa Diploma",
+        "parent_id":"8"
+    },
+    {
+        "id": "21",
+        "nama": "Beasiswa Sarjana",
+        "parent_id":"8"
+    },
+    {
+        "id": "22",
+        "nama": "Bantuan Biaya Pendidikan",
+        "parent_id":"9"
+    },
+    {
+        "id": "23",
+        "nama": "Bantuan Hutang Pengobatan",
+        "parent_id":"10"
+    },
+    {
+        "id": "24",
+        "nama": "Bantuan Biaya Pengobatan",
+        "parent_id":"10"
+    },
+    {
+        "id": "25",
+        "nama": "Bantuan Alat Kesehatan",
+        "parent_id":"10"
+    },
+    {
+        "id": "26",
+        "nama": "Sunatan Masal",
+        "parent_id":"10"
+    },
+    {
+        "id": "27",
+        "nama": "Operasional RSB",
+        "parent_id":"11"
+    },
+    {
+        "id": "28",
+        "nama": "Paket Ifthar Ramadhan",
+        "parent_id":"12"
+    },
+    {
+        "id": "29",
+        "nama": "Kelas Pembinaan Islam",
+        "parent_id":"12"
+    },
+    {
+        "id": "30",
+        "nama": "Kelas Pembinaan Da'i/Santunan",
+        "parent_id":"12"
+    },
+    {
+        "id": "31",
+        "nama": "Santunan Riqab",
+        "parent_id":"12"
+    },
+    {
+        "id": "32",
+        "nama": "Bantuan Ormas Islam/Masjid",
+        "parent_id":"12"
+    },
+    {
+        "id": "33",
+        "nama": "Santunan Guru Mengaji",
+        "parent_id":"12"
+    },
+    {
+        "id": "34",
+        "nama": "Fisabilillah Untuk Operasional",
+        "parent_id":"12"
+    },
+    {
+        "id": "35",
+        "nama": "Santunan Mualaf",
+        "parent_id":"12"
+    },
+    {
+        "id": "36",
+        "nama": "Santunan Fakir/Miskin",
+        "parent_id":"13"
+    },
+    {
+        "id": "37",
+        "nama": "Bantuan Renovasi RTLH",
+        "parent_id":"13"
+    },
+    {
+        "id": "38",
+        "nama": "Bantuan Ibnu Sabil",
+        "parent_id":"13"
+    },
+    {
+        "id": "39",
+        "nama": "Santunan Kematian",
+        "parent_id":"13"
+    },
+    {
+        "id": "40",
+        "nama": "Bantuan Kebencanaan",
+        "parent_id":"13"
+    },
+    {
+        "id": "41",
+        "nama": "Santunan Gharim",
+        "parent_id":"13"
+    },
+    {
+        "id": "42",
+        "nama": "Modal Usaha/Tunai",
+        "parent_id":"14"
+    },
+    {
+        "id": "43",
+        "nama": "Alat Usaha",
+        "parent_id":"16"
+    },
+    {
+        "id": "44",
+        "nama": "SD/MI",
+        "parent_id":"22"
+    },
+    {
+        "id": "45",
+        "nama": "SMP/MTS",
+        "parent_id":"22"
+    },
+    {
+        "id": "46",
+        "nama": "SMA/MA",
+        "parent_id":"22"
+    },
+    {
+        "id": "47",
+        "nama": "DIPLOMA",
+        "parent_id":"22"
+    },
+    {
+        "id": "48",
+        "nama": "SARJANA",
+        "parent_id":"22"
+    },
+    {
+        "id": "49",
+        "nama": "TONGKAT",
+        "parent_id":"25"
+    },
+    {
+        "id": "50",
+        "nama": "KURSI RODA",
+        "parent_id":"25"
+    },
+    {
+        "id": "51",
+        "nama": "ALAT DENGAR",
+        "parent_id":"25"
+    },
+    {
+        "id": "52",
+        "nama": "Alat Pertukangan",
+        "parent_id":"36"
+    },
+    {
+        "id": "53",
+        "nama": "Alat Pertanian",
+        "parent_id":"36"
+    },
+    {
+        "id": "54",
+        "nama": "Bantuan Lansia",
+        "parent_id":"36"
+    },
+    {
+        "id": "55",
+        "nama": "Gerubak Dagang",
+        "parent_id":"43"
+    },
+    {
+        "id": "56",
+        "nama": "Kompor Gas",
+        "parent_id":"43"
+    },
+    {
+        "id": "57",
+        "nama": "Mesin Steam",
+        "parent_id":"43"
+    },
+    {
+        "id": "58",
+        "nama": "Mesin Jahit",
+        "parent_id":"43"
+    },
+    {
+        "id": "59",
+        "nama": "Kompresor",
+        "parent_id":"43"
+    },
+    {
+        "id": "60",
+        "nama": "Lory",
+        "parent_id":"52"
+    },
+    {
+        "id": "61",
+        "nama": "Sugu Mesin",
+        "parent_id":"52"
+    },
+    {
+        "id": "62",
+        "nama": "Sinso",
+        "parent_id":"53"
+    },
+    {
+        "id": "63",
+        "nama": "Mesin Rumput",
+        "parent_id":"53"
+    },
+    {
+        "id": "64",
+        "nama": "Teng Semprot",
+        "parent_id":"53"
+    }
+    
+]
