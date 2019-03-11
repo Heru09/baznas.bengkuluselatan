@@ -1,26 +1,23 @@
-<script>
-function populate(s1,s2){
-    var s1 = document.getElementById(s1);
-	var s2 = document.getElementById(s2);
-console.log(s1);
-}
-</script>
 <!-- Start Page Content -->
                 <div class="row">
                     
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body p-b-0">
-                                <h4 class="card-title"><h6 class="m-0 font-weight-bold text-primary"><?php  echo $_GET['nama'];?></h6></h4>
+                                <h4 class="card-title"><h6 class="m-0 font-weight-bold text-primary"><?php  echo $_GET['nama'];?> <?php  echo $_GET['nik'];?></h6></h4>
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs customtab" role="tablist">
                                     <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home2" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Home</span></a> </li>
                                     <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profil" role="tab" id="getprofil"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Profil</span></a> </li>
                                     <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#bantuan" role="tab" id="getbantuan"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Bantuan</span></a> </li>
                                     <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#usulan" role="tab" id="getusulan"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Usulan</span></a> </li>
+                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#lamaran" role="tab" id="getlamaran"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Lamaran</span></a> </li>
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content">
+
+
+                                    <!-- .Tab Pane Menu Utama -->  
                                     <div class="tab-pane active" id="home2" role="tabpanel">
                                         <div class="p-20">
                                         <input type="hidden" id="getnik" name="getnik" value="<?php  echo $_GET['nik'];?>">
@@ -30,7 +27,10 @@ console.log(s1);
                                             Silahkan Pilih Menu yang di Sediakan
                                         </div>
                                     </div>
+                                    <!-- .End Tab Pane Menu Utama -->
 
+
+                                    <!-- .Tab Pane Profil -->    
                                     <div class="tab-pane  p-20" id="profil" role="tabpanel">                             
                                         <!-- .table responsive -->
                                         <div class="table-responsive m-t-1">
@@ -81,11 +81,13 @@ console.log(s1);
                                             <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Hapus</button>
                                         </div><!-- .End table responsive -->
                                     </div>
+                                    <!-- .End Tab Pane Profil --> 
 
 
+                                    <!-- .Tab Pane Bantuan --> 
                                     <div class="tab-pane  p-20" id="bantuan" role="tabpanel">
-                                    <!-- .table responsive -->
-                                    <div class="table">
+                                        <!-- .table responsive -->
+                                        <div class="table">
                                         <form class=""  method="POST" >
                                         <table id="tablemustahik" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                             <thead>
@@ -115,91 +117,86 @@ console.log(s1);
                                              <!-- <tbody id="tablemustahik">
                                                 
                                              </tbody>  -->
-                                        </table>
-                                        </form>
-                                    </div><!-- .End table responsive -->
+                                            </table>
+                                            </form>
+                                        </div><!-- .End table responsive -->
                                     </div>
+                                    <!-- .End Tab Pane Bantuan --> 
+
+
+                                    <!-- .Tab Pane Usulan --> 
                                     <div class="tab-pane p-20" id="usulan" role="tabpanel">
-                                    <!-- .table responsive -->
-                                    <div class="table">
-                                    <div class="content">
-                                        <div class="animated fadeIn">
-                                            <div class="row">   
-                                                <div class="col-lg-6">
-                                                        <div class="card">
-                                                            <div class="card-header">
-                                                                <strong>Form Pilih Usulan</strong>
+                                        <!-- .table responsive -->
+                                        <div class="table">
+                                        <div class="content">
+                                            <div class="animated fadeIn">
+                                                <div class="row">   
+                                                    <div class="col-lg-6">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <strong>Form Pilih Usulan</strong> <a href="" >.Download Petunjuk</a>
+                                                                </div>
+                                                                <div class="card-body card-block">
+
+                                                                    <form>
+                                                                    <div class="has-warning form-group">
+                                                                        <label for="inputIsInvalid" class=" form-control-label"></label>
+                                                                        <select id="bidang" name="bidang" class="form-control">
+                                                                            <option value="">Pilih Bidang</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    </form>
+                                                                    
+
+                                                                    <div class="has-success form-group">
+                                                                        <label for="inputIsInvalid" class=" form-control-label"></label>
+                                                                        <select name="program" id="program" class="form-control">
+                                                                            <option value="">Pilih Program</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                    <div class="has-success form-group">
+                                                                        <label for="inputIsInvalid" class=" form-control-label"></label>
+                                                                        <select name="jenisbantuan" id="jenisbantuan" class="form-control">
+                                                                            <option value="">Pilih Jenis Bantuan</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                    <div class="has-success form-group">
+                                                                        <label for="inputIsInvalid" class=" form-control-label"></label>
+                                                                        <select name="jenisbarang" id="jenisbarang" class="form-control">
+                                                                            <option value="">Pilih Jenis Barang</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                    <div class="has-success form-group">
+                                                                        <label for="inputIsInvalid" class=" form-control-label"></label>
+                                                                        <select name="namabarang" id="namabarang" class="form-control">
+                                                                            <option value="">Pilih Nama Barang</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                    <div class="form-actions form-group">
+                                                                    <button type="button" class="btn btn-primary"><i class="fa fa-star"></i>&nbsp; Pilih</button>
+                                                                    <button type="button" class="btn btn-secondary"><i class="fa fa-lightbulb-o"></i>&nbsp; Ulang (Klik Pilih Bidang)</button>
+                                                                    </div>
+
+                                                                </div>
                                                             </div>
-                                                            <div class="card-body card-block">
-
-                                                                <form>
-                                                                <div class="has-warning form-group">
-                                                                    <label for="inputIsInvalid" class=" form-control-label"></label>
-                                                                    <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')" class="form-control">
-                                                                        <option value="0">Bidang.....</option>
-                                                                        <option value="B1">Ekonomi</option>
-                                                                        <option value="B2">Pendidikan</option>
-                                                                        <option value="B3">Kesehatan</option>
-                                                                        <option value="B4">Dakwah-Advokasi</option>
-                                                                        <option value="B5">Kemanusiaan</option>
-                                                                    </select>
-                                                                </div>
-                                                                </form>
-                                                                <div class="form-actions form-group">
-                                                                <button type="button" id="bidangpilih" class="btn btn-danger"><i class="fa fa-rss"></i>&nbsp; Pilih</button>
-                                                                </div>
-                                                                
-
-                                                                <div class="has-success form-group">
-                                                                    <label for="inputIsInvalid" class=" form-control-label"></label>
-                                                                    <select name="select" id="select" class="form-control">
-                                                                        <option value="0">Program......</option>
-                                                                        <option value="1">Zakat Community Development</option>
-                                                                        <option value="2">Program Pemberdayaan Ekonomi</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="form-actions form-group">
-                                                                <button type="button" class="btn btn-warning"><i class="fa fa-map-marker"></i>&nbsp; Pilih</button>
-                                                                </div>
-
-                                                                <div class="has-success form-group">
-                                                                    <label for="inputIsInvalid" class=" form-control-label"></label>
-                                                                    <select name="select" id="select" class="form-control">
-                                                                        <option value="0">Jenis Bantuan....</option>
-                                                                        <option value="1">Zakat ZCD 1</option>
-                                                                        <option value="2">Zakat ZCD 2</option>
-                                                                        <option value="3">Program Modal Usaha</option>
-                                                                        <option value="4">Program Pelatihan Usaha</option>
-                                                                        <option value="5">Koperasi Mustahik</option>
-                                                                        <option value="6">Pemberdayaan Ekonomi</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="form-actions form-group">
-                                                                <button type="button" class="btn btn-primary"><i class="fa fa-star"></i>&nbsp; Pilih</button>
-                                                                <button type="button" class="btn btn-secondary"><i class="fa fa-lightbulb-o"></i>&nbsp; Ulang</button>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-lg-6">
-                                                        <div class="card">
-                                                            <div class="card-header">
-                                                                <strong><em>Form Usulan Yang Dipilih</em></strong>
-                                                            </div>
-                                                            <div class="card-body card-block">
-                                                                <div class="has-success form-group">
-                                                                    <label for="inputSuccess2i" class=" form-control-label"></label>
-                                                                    <input type="text" id="inputSuccess2i" class="form-control-success form-control">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                            </div>
-                                        </div><!-- .animated -->
-                                    </div><!-- .content -->
-                                    </div><!-- .End table responsive -->
+                                            </div><!-- .animated -->
+                                        </div><!-- .content -->
+                                        </div><!-- .End table responsive -->
                                     </div>
+                                    <!-- .End Tab Pane Usulan --> 
+
+                                    <!-- .Tab Pane Lamaran --> 
+                                    <div class="tab-pane p-20" id="lamaran" role="tabpanel">
+                                        Lamaran Anda
+                                    </div>
+                                    <!-- .End Tab Pane Lamaran -->
+
                                 </div>
                             </div>
                         </div>
@@ -212,6 +209,7 @@ console.log(s1);
 <script type="text/javascript">
     $(document).ready(function(){
 
+        // GetProfile    
         $('#getprofil').on('click',function(){
             var getnik = $('#getnik').val();
             var getiduser = $('#getiduser').val();
@@ -249,7 +247,9 @@ console.log(s1);
                }
             });
         });
+        // End GetProfile
 
+        // GetBantuan
         $('#getbantuan').on('click',function(){
             var table;
             table = $('#tablemustahik').DataTable({ 
@@ -281,10 +281,77 @@ console.log(s1);
             ]
             });
         });
+        // End GetBantuan
 
-        $('#bidangfrm').on('click',function(){
-                console.log("Y");
+        //Get Usulan
+        $('#getusulan').on('click',function(){
+
+            load_json_data('bidang');
+
+            function load_json_data(id, parent_id){
+                var html_code = '';
+                $.getJSON('usulan.json', function(data){
+                    html_code += '<option value= "">Pilih '+id+'</option>';
+                    $.each(data, function(key, value){
+                    if(id == 'bidang'){
+                        if(value.parent_id == '0'){
+                        html_code += '<option value="'+value.id+'">'+value.nama+'</option>';
+                        }
+                    }else{
+                        if(value.parent_id == parent_id){
+                        html_code += '<option value="'+value.id+'">'+value.nama+'</option>';
+                        }
+                    }
+                    });
+                    $('#'+id).html(html_code);
+                });
+            }
+
+            $(document).on('change','#bidang', function(){
+                var program_id = $(this).val();
+                if(program_id != ''){
+                    load_json_data('program', program_id);
+                }else{
+                    $('#program').html('<option value = "">Pilih Program</option>');
+                    $('#jenisbantuan').html('<option value = "">Pilih Jenis Bantuan</option>');
+                    $('#jenisbarang').html('<option value = "">Pilih Jenis Barang</option>');
+                    $('#namabarang').html('<option value = "">Pilih Nama Barang</option>');
+                }
+            });
+
+            $(document).on('change','#program', function(){
+                var jenisbantuan_id = $(this).val();
+                if(jenisbantuan_id != ''){
+                    load_json_data('jenisbantuan', jenisbantuan_id);
+                }else{
+                    $('#jenisbantuan').html('<option value = "">Pilih Jenis Bantuan</option>');
+                    $('#jenisbarang').html('<option value = "">Pilih Jenis Barang</option>');
+                    $('#namabarang').html('<option value = "">Pilih Nama Barang</option>');
+                }
+            });
+
+            $(document).on('change','#jenisbantuan', function(){
+                var jenisbarang_id = $(this).val();
+                if(jenisbarang_id != ''){
+                    load_json_data('jenisbarang', jenisbarang_id);
+                }else{
+                    $('#namabarang').html('<option value = "">Pilih Nama Barang</option>');
+                }
+            });
+
+            $(document).on('change','#jenisbarang', function(){
+                var namabarang_id = $(this).val();
+                if(namabarang_id != ''){
+                    load_json_data('namabarang', namabarang_id);
+                }else{
+                   
+                }
+            });
+
+
+
         });
+        //End Get Usulan
          
     });
 </script>
