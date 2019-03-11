@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Feb 2019 pada 04.07
+-- Waktu pembuatan: 11 Mar 2019 pada 10.44
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.2.12
 
@@ -33,11 +33,11 @@ CREATE TABLE `calonmustahik` (
   `email` char(50) NOT NULL,
   `iduser` char(12) NOT NULL,
   `kk` char(50) NOT NULL,
-  `nama` varchar(50) NOT NULL,
+  `nama` tinytext NOT NULL,
   `namapanggilan` tinytext NOT NULL,
   `nik` char(50) NOT NULL,
   `jk` char(2) NOT NULL,
-  `tempatlahir` varchar(75) NOT NULL,
+  `tempatlahir` tinytext NOT NULL,
   `tanggallahir` date NOT NULL,
   `agama` char(12) NOT NULL,
   `hp` char(12) NOT NULL,
@@ -51,8 +51,42 @@ CREATE TABLE `calonmustahik` (
 
 INSERT INTO `calonmustahik` (`no`, `email`, `iduser`, `kk`, `nama`, `namapanggilan`, `nik`, `jk`, `tempatlahir`, `tanggallahir`, `agama`, `hp`, `alamatlengkap`, `terdaftar`) VALUES
 (6, 'baznas.airnipis.maras@gmail.com', '1701051003', '1701082212110003', 'REDHO ABDI', 'REDHO', '1701081210070001', 'L', 'MARAS', '2007-10-12', 'ISLAM', '', 'DESA MARAS KEC. AIR NIPIS', '2019-02-15'),
-(7, 'baznas.airnipis.palakbengkerung@gmail.com', '1701051006', '1701081805160001', 'SAHARIA', 'NDUK IMI', '1701086701470002', 'P', 'MUARA TIGA', '1947-01-27', 'ISLAM', '085238138038', 'DESA PALAK BENGKERUNG KEC. AIR NIPIS', '2019-02-15'),
-(8, 'baznas.airnipis.palakbengkerung@gmail.com', '1701051006', '1701082212110003', 'REDHO ABDI', 'REDHO', '1701081210070001', 'L', 'MARAS', '2007-10-12', 'ISLAM', '', 'DESA PALAK BENGKERUNG KEC. AIR NIPIS', '2019-02-15');
+(7, 'baznas.airnipis.palakbengkerung@gmail.com', '1701051006', '1701081805160001', 'SAHARIA', 'NDUK IMI', '1701086701470002', 'P', 'MUARA TIGA', '1947-01-27', 'ISLAM', '085238138038', 'DESA PALAK BENGKERUNG KEC. AIR NIPIS', '2019-02-10'),
+(8, 'baznas.airnipis.palakbengkerung@gmail.com', '1701051006', '1701082212110003', 'REDHO ABDI', 'REDHO', '1701081210070001', 'L', 'MARAS', '2007-10-12', 'ISLAM', '', 'DESA PALAK BENGKERUNG KEC. AIR NIPIS', '2019-02-15'),
+(9, 'baznas.airnipis.maras@gmail.com', '1701051003', '170/mrs/2019', 'FURKAN', 'FURKAN', '170/mrs/2019', 'L', 'MARAS', '1985-10-12', 'ISLAM', '', 'DESA MARAS KEC. AIR NIPIS', '2019-02-19');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `gurumengaji`
+--
+
+CREATE TABLE `gurumengaji` (
+  `no` int(11) NOT NULL,
+  `email` char(50) NOT NULL,
+  `iduser` char(12) NOT NULL,
+  `kk` char(50) NOT NULL,
+  `nama` tinytext NOT NULL,
+  `namapanggilan` tinytext NOT NULL,
+  `nik` char(50) NOT NULL,
+  `jk` char(2) NOT NULL,
+  `tempatlahir` tinytext NOT NULL,
+  `tanggallahir` date NOT NULL,
+  `agama` char(12) NOT NULL,
+  `hp` char(12) NOT NULL,
+  `alamatlengkap` text NOT NULL,
+  `skpengangkatan` tinytext NOT NULL,
+  `skpemberhentian` tinytext NOT NULL,
+  `tempatkegiatan` tinytext NOT NULL,
+  `linkabsen` tinytext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `gurumengaji`
+--
+
+INSERT INTO `gurumengaji` (`no`, `email`, `iduser`, `kk`, `nama`, `namapanggilan`, `nik`, `jk`, `tempatlahir`, `tanggallahir`, `agama`, `hp`, `alamatlengkap`, `skpengangkatan`, `skpemberhentian`, `tempatkegiatan`, `linkabsen`) VALUES
+(1, 'baznas.airnipis.sukanegeri@gmail.com', '1701051003', '17010800200001', 'BETTY KARLINA', 'BETTY', '1701051103810001', 'P', 'PALAK BENGKERUNG', '1981-03-11', 'ISLAM', '', 'DESA SUKANEGERI KEC. AIR NIPIS', '01/baznas.bs/gurumengaji/I/2019', '', 'Masjid Bilal Bin Rabbah', '');
 
 -- --------------------------------------------------------
 
@@ -80,7 +114,8 @@ CREATE TABLE `mustahik` (
 INSERT INTO `mustahik` (`no`, `email`, `iduser`, `nik`, `bantuan`, `satuan`, `rp`, `tgl`, `via`, `ket`) VALUES
 (1, 'baznas.airnipis.maras@gmail.com', '1701051003', '1701081210070001', 'BANTUAN PENDIDIKAN', '', '300.000', '2019-02-15', 'KANTOR BAZNAS', ''),
 (2, 'baznas.airnipis.maras@gmail.com', '1701051003', '1701081210070001', 'BANTUAN PENDIDIKAN', '', '300.000', '2019-02-18', 'KANTOR BAZNAS', ''),
-(3, 'baznas.airnipis.palakbengkerung@gmail.com', '1701051006', '1701086701470002', 'BANTUAN LANSIA', '', '300.000', '2019-02-19', 'KANTOR BAZNAS', '');
+(3, 'baznas.airnipis.palakbengkerung@gmail.com', '1701051006', '1701086701470002', 'BANTUAN LANSIA', '', '300.000', '2019-02-19', 'KANTOR BAZNAS', ''),
+(4, 'baznas.airnipis.maras@gmail.com', '1701051003', '170/mrs/2019', 'MESIN SIONSO', '1 Buah', '1.500.000', '2019-02-22', 'KANTOR BAZNAS', '');
 
 -- --------------------------------------------------------
 
@@ -102,8 +137,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`email`, `password`, `namauser`, `iduser`, `kec`, `status`) VALUES
-('baznas.airnipis.maras@gmail.com', '', 'DESA AIR NIPIS', '1701051003', 'AIR NIPIS', 0),
-('baznas.airnipis.palakbengkerung@gmail.com', '', 'DESA PALAK BENGKERUNG', '1701051006', 'AIR NIPIS', 0);
+('baznas.airnipis.maras@gmail.com', '', 'DESA MARAS', '1701051003', 'AIR NIPIS', 0),
+('baznas.airnipis.palakbengkerung@gmail.com', '', 'DESA PALAK BENGKERUNG', '1701051006', 'AIR NIPIS', 0),
+('baznas.airnipis.sukanegeri@gmail.com', '', 'DESA SUKA NEGERI', '1701051003', 'AIR NIPIS', 0);
 
 -- --------------------------------------------------------
 
@@ -192,6 +228,12 @@ ALTER TABLE `calonmustahik`
   ADD PRIMARY KEY (`no`);
 
 --
+-- Indeks untuk tabel `gurumengaji`
+--
+ALTER TABLE `gurumengaji`
+  ADD PRIMARY KEY (`no`);
+
+--
 -- Indeks untuk tabel `mustahik`
 --
 ALTER TABLE `mustahik`
@@ -218,13 +260,19 @@ ALTER TABLE `usulanfrm`
 -- AUTO_INCREMENT untuk tabel `calonmustahik`
 --
 ALTER TABLE `calonmustahik`
-  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT untuk tabel `gurumengaji`
+--
+ALTER TABLE `gurumengaji`
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `mustahik`
 --
 ALTER TABLE `mustahik`
-  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `usulanfrm`
