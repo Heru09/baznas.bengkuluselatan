@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Mar 2019 pada 11.56
+-- Waktu pembuatan: 12 Mar 2019 pada 23.34
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.2.12
 
@@ -75,18 +75,20 @@ CREATE TABLE `gurumengaji` (
   `agama` char(12) NOT NULL,
   `hp` char(12) NOT NULL,
   `alamatlengkap` text NOT NULL,
-  `skpengangkatan` tinytext NOT NULL,
-  `skpemberhentian` tinytext NOT NULL,
+  `skpengangkatanbaznas` tinytext NOT NULL,
+  `skpengangkatandesa` tinytext NOT NULL,
+  `skpemberhentianbaznas` tinytext NOT NULL,
+  `skpemberhentiandesa` tinytext NOT NULL,
   `tempatkegiatan` tinytext NOT NULL,
-  `linkabsen` tinytext NOT NULL
+  `linklaporan` tinytext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `gurumengaji`
 --
 
-INSERT INTO `gurumengaji` (`no`, `email`, `iduser`, `kk`, `nama`, `namapanggilan`, `nik`, `jk`, `tempatlahir`, `tanggallahir`, `agama`, `hp`, `alamatlengkap`, `skpengangkatan`, `skpemberhentian`, `tempatkegiatan`, `linkabsen`) VALUES
-(1, 'baznas.airnipis.sukanegeri@gmail.com', '1701051007', '17010800200001', 'BETTY KARLINA', 'BETTY', '1701051103810001', 'P', 'PALAK BENGKERUNG', '1981-03-11', 'ISLAM', '', 'DESA SUKANEGERI KEC. AIR NIPIS', '01/baznas.bs/gurumengaji/I/2019', '', 'Masjid Bilal Bin Rabbah', '');
+INSERT INTO `gurumengaji` (`no`, `email`, `iduser`, `kk`, `nama`, `namapanggilan`, `nik`, `jk`, `tempatlahir`, `tanggallahir`, `agama`, `hp`, `alamatlengkap`, `skpengangkatanbaznas`, `skpengangkatandesa`, `skpemberhentianbaznas`, `skpemberhentiandesa`, `tempatkegiatan`, `linklaporan`) VALUES
+(1, 'baznas.airnipis.sukanegeri@gmail.com', '1701051007', '17010800200001', 'BETTY KARLINA', 'BETTY', '1701051103810001', 'P', 'PALAK BENGKERUNG', '1981-03-11', 'ISLAM', '', 'DESA SUKANEGERI KEC. AIR NIPIS', '01/baznas.bs/gurumengaji/I/2019', '', '', '', 'Masjid Bilal Bin Rabbah', 'https://drive.google.com/open?id=1CHGiD7fv6ZKM-Dv0YzYpT-LG7I6tVY7oJj6zk-vElXA');
 
 -- --------------------------------------------------------
 
@@ -98,6 +100,7 @@ CREATE TABLE `mustahik` (
   `no` int(11) NOT NULL,
   `email` char(50) NOT NULL,
   `iduser` char(12) NOT NULL,
+  `bidang` tinytext NOT NULL,
   `nik` char(50) NOT NULL,
   `bantuan` tinytext NOT NULL,
   `satuan` char(12) NOT NULL,
@@ -111,11 +114,11 @@ CREATE TABLE `mustahik` (
 -- Dumping data untuk tabel `mustahik`
 --
 
-INSERT INTO `mustahik` (`no`, `email`, `iduser`, `nik`, `bantuan`, `satuan`, `rp`, `tgl`, `via`, `ket`) VALUES
-(1, 'baznas.airnipis.maras@gmail.com', '1701051003', '1701081210070001', 'BANTUAN PENDIDIKAN', '', '300.000', '2019-02-15', 'KANTOR BAZNAS', ''),
-(2, 'baznas.airnipis.maras@gmail.com', '1701051003', '1701081210070001', 'BANTUAN PENDIDIKAN', '', '300.000', '2019-02-18', 'KANTOR BAZNAS', ''),
-(3, 'baznas.airnipis.palakbengkerung@gmail.com', '1701051006', '1701086701470002', 'BANTUAN LANSIA', '', '300.000', '2019-02-19', 'KANTOR BAZNAS', ''),
-(4, 'baznas.airnipis.maras@gmail.com', '1701051003', '170/mrs/2019', 'MESIN SIONSO', '1 Buah', '1.500.000', '2019-02-22', 'KANTOR BAZNAS', '');
+INSERT INTO `mustahik` (`no`, `email`, `iduser`, `bidang`, `nik`, `bantuan`, `satuan`, `rp`, `tgl`, `via`, `ket`) VALUES
+(1, 'baznas.airnipis.maras@gmail.com', '1701051003', 'PENDIDIKAN', '1701081210070001', 'BANTUAN PENDIDIKAN', '', '300.000', '2019-02-15', 'KANTOR BAZNAS', ''),
+(2, 'baznas.airnipis.maras@gmail.com', '1701051003', 'PENDIDIKAN', '1701081210070001', 'BANTUAN PENDIDIKAN', '', '300.000', '2019-02-18', 'KANTOR BAZNAS', ''),
+(3, 'baznas.airnipis.palakbengkerung@gmail.com', '1701051006', 'KEMANUSIAAN', '1701086701470002', 'BANTUAN LANSIA', '', '300.000', '2019-02-19', 'KANTOR BAZNAS', ''),
+(4, 'baznas.airnipis.maras@gmail.com', '1701051003', 'KEMANUSIAAN', '170/mrs/2019', 'MESIN SIONSO', '1 Buah', '1.500.000', '2019-02-22', 'KANTOR BAZNAS', '');
 
 -- --------------------------------------------------------
 
