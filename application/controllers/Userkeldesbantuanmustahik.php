@@ -26,6 +26,7 @@ class Userkeldesbantuanmustahik extends CI_Controller {
 		 $data = $this->MUserkeldesbantuanmustahik->get_mustahik($getnik, $getiduser);
 		 foreach ($data as $row){
 			$mustahik['no'] = $no++; 
+			$mustahik['bidang'] = $row->bidang;
 			$mustahik['nik'] = $row->nik; 
 			$mustahik['bantuan'] = $row->bantuan; 
 			$mustahik['satuan'] = $row->satuan; 

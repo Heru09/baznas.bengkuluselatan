@@ -93,6 +93,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>NO</th>
+                                                    <th>BIDANG</th>
                                                     <th>BANTUAN</th>
                                                     <th>SATUAN</th>
                                                     <th>RP</th>
@@ -105,6 +106,7 @@
                                             <tfoot>
                                                 <tr>
                                                     <th>NO</th>
+                                                    <th>BIDANG</th>
                                                     <th>BANTUAN</th>
                                                     <th>SATUAN</th>
                                                     <th>RP</th>
@@ -271,6 +273,7 @@
             "columns": 
             [
                 { "data": "no" },
+                { "data": "bidang" },
                 { "data": "bantuan" },
                 { "data": "satuan" },
                 { "data": "rp" },

@@ -2,9 +2,9 @@
 
 class MUserkeldesgetgurumengaji extends CI_Model {
 var $table = 'gurumengaji'; 
-	var $select  = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','skpengangkatan','skpemberhentian','tempatkegiatan','linkabsen'); 
-	var $column_order = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','skpengangkatan','skpemberhentian','tempatkegiatan','linkabsen'); 
-	var $column_search = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','skpengangkatan','skpemberhentian','tempatkegiatan','linkabsen');
+	var $select  = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','skpengangkatanbaznas','skpengangkatandesa','skpemberhentianbaznas','skpemberhentiandesa','tempatkegiatan','linklaporan'); 
+	var $column_order = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','skpengangkatanbaznas','skpengangkatandesa','skpemberhentianbaznas','skpemberhentiandesa','tempatkegiatan','linklaporan'); 
+	var $column_search = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','skpengangkatanbaznas','skpengangkatandesa','skpemberhentianbaznas','skpemberhentiandesa','tempatkegiatan','linklaporan');
 	
 	var $order = array('nama' => 'asc'); 
 

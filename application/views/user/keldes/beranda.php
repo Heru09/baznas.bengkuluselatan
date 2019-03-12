@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white">0</h2>
-                                    <p class="m-b-0">UPZ OPD</p>
+                                    <p class="m-b-0">CALON MUSTAHIK</p>
                                 </div>
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white">0</h2>
-                                    <p class="m-b-0">UPZ SWASTA</p>
+                                    <p class="m-b-0">GURU MENGAJI</p>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white">0</h2>
-                                    <p class="m-b-0">MEMAKMURKAN MASJID</p>
+                                    <p class="m-b-0">BEDAH RUMAH</p>
                                 </div>
                             </div>
                         </div>
