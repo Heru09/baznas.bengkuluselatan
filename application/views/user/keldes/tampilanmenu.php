@@ -170,7 +170,7 @@
                         <li> <a href="<?php echo base_url()?>Userkeldesgurumengaji" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Guru Mengaji</span></span></a>
                         </li>
                         <li class="nav-label">e-Pid</li>
-                        <li> <a href="<?php echo base_url()?>Userkeldesmpid" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Peraturan</span></span></a>
+                        <li> <a href="<?php echo base_url()?>Userkeldesmpid" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Peraturan</span></span></a>
                         </li>
                     </ul>
                 </nav>

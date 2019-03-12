@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Mar 2019 pada 10.44
+-- Waktu pembuatan: 12 Mar 2019 pada 11.56
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.2.12
 
@@ -86,7 +86,7 @@ CREATE TABLE `gurumengaji` (
 --
 
 INSERT INTO `gurumengaji` (`no`, `email`, `iduser`, `kk`, `nama`, `namapanggilan`, `nik`, `jk`, `tempatlahir`, `tanggallahir`, `agama`, `hp`, `alamatlengkap`, `skpengangkatan`, `skpemberhentian`, `tempatkegiatan`, `linkabsen`) VALUES
-(1, 'baznas.airnipis.sukanegeri@gmail.com', '1701051003', '17010800200001', 'BETTY KARLINA', 'BETTY', '1701051103810001', 'P', 'PALAK BENGKERUNG', '1981-03-11', 'ISLAM', '', 'DESA SUKANEGERI KEC. AIR NIPIS', '01/baznas.bs/gurumengaji/I/2019', '', 'Masjid Bilal Bin Rabbah', '');
+(1, 'baznas.airnipis.sukanegeri@gmail.com', '1701051007', '17010800200001', 'BETTY KARLINA', 'BETTY', '1701051103810001', 'P', 'PALAK BENGKERUNG', '1981-03-11', 'ISLAM', '', 'DESA SUKANEGERI KEC. AIR NIPIS', '01/baznas.bs/gurumengaji/I/2019', '', 'Masjid Bilal Bin Rabbah', '');
 
 -- --------------------------------------------------------
 
@@ -139,7 +139,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`email`, `password`, `namauser`, `iduser`, `kec`, `status`) VALUES
 ('baznas.airnipis.maras@gmail.com', '', 'DESA MARAS', '1701051003', 'AIR NIPIS', 0),
 ('baznas.airnipis.palakbengkerung@gmail.com', '', 'DESA PALAK BENGKERUNG', '1701051006', 'AIR NIPIS', 0),
-('baznas.airnipis.sukanegeri@gmail.com', '', 'DESA SUKA NEGERI', '1701051003', 'AIR NIPIS', 0);
+('baznas.airnipis.sukanegeri@gmail.com', '', 'DESA SUKA NEGERI', '1701051007', 'AIR NIPIS', 0);
 
 -- --------------------------------------------------------
 
