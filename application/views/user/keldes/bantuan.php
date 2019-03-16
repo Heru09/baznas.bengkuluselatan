@@ -139,16 +139,13 @@
                                                                     <strong>Form Pilih Usulan</strong> <a href="" >.Download Petunjuk</a>
                                                                 </div>
                                                                 <div class="card-body card-block">
-
-                                                                    <form>
+                                                                <form>
                                                                     <div class="has-warning form-group">
                                                                         <label for="inputIsInvalid" class=" form-control-label"></label>
                                                                         <select id="bidang" name="bidang" class="form-control">
-                                                                            <option value="">Pilih Bidang</option>
+                                                                            <option value="pilihbidang">Pilih Bidang</option>
                                                                         </select>
-                                                                    </div>
-                                                                    </form>
-                                                                    
+                                                                    </div>                                                                  
 
                                                                     <div class="has-success form-group">
                                                                         <label for="inputIsInvalid" class=" form-control-label"></label>
@@ -178,10 +175,36 @@
                                                                         </select>
                                                                     </div>
 
+                                                                    <!-- Persyaratan Khusus Bidang Ekonomi-->
+                                                                    <div class="form-group" id="syaratkhususbidangekonomi">
+                                                                        <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Surat Keterangan Usaha"> 
+                                                                    </div>
+
+                                                                    <!-- Persyaratan Khusus Bidang Pendidikan-->
+                                                                    <div class="form-group" id="syaratkhususbidangpendidikan">
+                                                                        <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Surat Keterangan Sekolah"> 
+                                                                    </div>
+
+                                                                    <!-- Persyaratan Khusus Bidang Kesehatan-->
+                                                                    <div class="form-group" id="syaratkhususbidangkesehatan">
+                                                                        <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Surat Keterangan Sakit"> 
+                                                                    </div>
+
+                                                                    <!-- Persyaratan Khusus Bidang Dakwah Advokasi-->
+                                                                    <div class="form-group" id="syaratkhususbidangdakwahadvokasi">
+                                                                        <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Sertfikat Dakwah Advokasi"> 
+                                                                    </div>
+
+                                                                    <!-- Persyaratan Khusus Bidang Kemanusiaan-->
+                                                                    <div class="form-group" id="syaratkhususbidangkemanusiaan">
+                                                                        <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Surat Keterangan Tidak Mampu"> 
+                                                                    </div>
+
                                                                     <div class="form-actions form-group">
                                                                     <button type="button" class="btn btn-primary"><i class="fa fa-star"></i>&nbsp; Pilih</button>
                                                                     <button type="button" class="btn btn-secondary"><i class="fa fa-lightbulb-o"></i>&nbsp; Ulang (Klik Pilih Bidang)</button>
                                                                     </div>
+                                                                </form>
 
                                                                 </div>
                                                             </div>
@@ -294,7 +317,7 @@
             function load_json_data(id, parent_id){
                 var html_code = '';
                 $.getJSON('usulan.json', function(data){
-                    html_code += '<option value= "">Pilih '+id+'</option>';
+                    html_code += '<option value= "pilihbidang">Pilih '+id+'</option>';
                     $.each(data, function(key, value){
                     if(id == 'bidang'){
                         if(value.parent_id == '0'){
@@ -351,10 +374,60 @@
                 }
             });
 
-
-
         });
         //End Get Usulan
          
     });
+
+    $("#bidang").change(function() {
+        if($(this).val() == "pilihbidang") {
+            $('#syaratkhususbidangekonomi').hide();
+            $('#syaratkhususbidangpendidikan').hide(); 
+            $('#syaratkhususbidangkesehatan').hide();   
+            $('#syaratkhususbidangdakwahadvokasi').hide();         
+            $('#syaratkhususbidangkemanusiaan').hide();      
+		}
+
+        if($(this).val() == "1") {
+            $('#syaratkhususbidangekonomi').show();
+            $('#syaratkhususbidangpendidikan').hide(); 
+            $('#syaratkhususbidangkesehatan').hide();   
+            $('#syaratkhususbidangdakwahadvokasi').hide();         
+            $('#syaratkhususbidangkemanusiaan').hide();      
+		}
+
+        if($(this).val() == "2") {
+            $('#syaratkhususbidangekonomi').hide();
+            $('#syaratkhususbidangpendidikan').show(); 
+            $('#syaratkhususbidangkesehatan').hide();   
+            $('#syaratkhususbidangdakwahadvokasi').hide();         
+            $('#syaratkhususbidangkemanusiaan').hide();      
+		}
+
+        if($(this).val() == "3") {
+            $('#syaratkhususbidangekonomi').hide();
+            $('#syaratkhususbidangpendidikan').hide(); 
+            $('#syaratkhususbidangkesehatan').show();   
+            $('#syaratkhususbidangdakwahadvokasi').hide();         
+            $('#syaratkhususbidangkemanusiaan').hide();      
+		}
+
+        if($(this).val() == "4") {
+            $('#syaratkhususbidangekonomi').hide();
+            $('#syaratkhususbidangpendidikan').hide(); 
+            $('#syaratkhususbidangkesehatan').hide();   
+            $('#syaratkhususbidangdakwahadvokasi').show();         
+            $('#syaratkhususbidangkemanusiaan').hide();      
+		}
+
+        if($(this).val() == "5") {
+            $('#syaratkhususbidangekonomi').hide();
+            $('#syaratkhususbidangpendidikan').hide(); 
+            $('#syaratkhususbidangkesehatan').hide();   
+            $('#syaratkhususbidangdakwahadvokasi').hide();         
+            $('#syaratkhususbidangkemanusiaan').show();      
+		}
+	});
+	$("#bidang").trigger("change");
+
 </script>
