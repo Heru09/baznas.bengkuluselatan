@@ -16,8 +16,8 @@
                                                 <th>NAMA</th>
                                                 <th>NIK/NO.DOMISILI	</th>
                                                 <th>JK</th>
-                                                <th>TEMPAT LAHIR</th>
-                                                <th>TANGGAL LAHIR</th>
+                                                <th>SK PENGANGKATAN</th>
+                                                <th>SK PEMBERHENTIAN</th>
                                                 <th>ACTION</th>
                                             </tr>
                                         </thead>
@@ -27,8 +27,8 @@
                                                 <th>NAMA</th>
                                                 <th>NIK/NO.DOMISILI	</th>
                                                 <th>JK</th>
-                                                <th>TEMPAT LAHIR</th>
-                                                <th>TANGGAL LAHIR</th>
+                                                <th>SK PENGANGKATAN</th>
+                                                <th>SK PEMBERHENTIAN</th>
                                                 <th>ACTION</th>
                                             </tr>
                                         </tfoot>

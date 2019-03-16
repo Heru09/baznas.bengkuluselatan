@@ -30,8 +30,8 @@ class Userkeldesgurumengaji extends CI_Controller {
 			$row[] = '<a href="Userkeldesgurumengajidetail?nik='.$field->nik.'&&iduser='.$iduser.'&&nama='.$field->nama.'">'.$field->nama.'</a>';
 			$row[] = $field->nik;
 			$row[] = $field->jk;
-			$row[] = $field->tempatlahir;
-			$row[] = '<a href='.$field->linklaporan.'>Laporan</a>';	
+			$row[] = $field->skpengangkatanbaznas;
+			$row[] = $field->skpemberhentianbaznas;
 			$row[] = '<a href="Userkeldesgurumengajidetail?nik='.$field->nik.'&&iduser='.$iduser.'&&nama='.$field->nama.'"><button type="button" id="disetujui" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="ti-settings"></i>Detail</button></a>';
 
 			$data[] = $row;
