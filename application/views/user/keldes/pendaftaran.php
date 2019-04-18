@@ -68,7 +68,13 @@
                                         <div class="form-group">
                                             <p class="text-muted m-b-15 f-s-12">ALAMAT<code> Beri Kami alamat rumah secara detail</code></p>
                                             <div class="input-group input-group-rounded">
-                                                <textarea class="form-control" name="alamatlengkap" id="alamatlengkap" placeholder="Jl BLK Rt.08 Samping Rumah Mak Ayi dan Pak Tari Kel. Kota Medan Kec. Kota Manna Kab. Bengkulu Selatan" required></textarea>
+                                                <textarea class="form-control" name="alamatlengkap" id="alamatlengkap" placeholder="Contoh: Jl BLK Rt.08 Samping Rumah Mak Ayi dan Pak Tari Kel. Kota Medan Kec. Kota Manna Kab. Bengkulu Selatan" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <p class="text-muted m-b-15 f-s-12">NAMA NAMA ANGGOTA KELUARGA</p>
+                                            <div class="input-group input-group-rounded">
+                                                <textarea class="form-control" name="alamatlengkap" id="alamatlengkap" placeholder="Contoh: Moh. Fajar, Beit Azri, Heru Prasetyo, Cahyo Prakoso" required></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group row m-b-0">
