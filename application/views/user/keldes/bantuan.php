@@ -11,7 +11,6 @@
                                     <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profil" role="tab" id="getprofil"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Profil</span></a> </li>
                                     <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#bantuan" role="tab" id="getbantuan"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Bantuan</span></a> </li>
                                     <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#usulan" role="tab" id="getusulan"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Usulan</span></a> </li>
-                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#lamaran" role="tab" id="getlamaran"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Lamaran</span></a> </li>
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content">
@@ -129,7 +128,6 @@
                                     <!-- .Tab Pane Usulan --> 
                                     <div class="tab-pane p-20" id="usulan" role="tabpanel">
                                         <!-- .table responsive -->
-                                        <div class="table">
                                         <div class="content">
                                             <div class="animated fadeIn">
                                                 <div class="row">   
@@ -175,7 +173,21 @@
                                                                         </select>
                                                                     </div>
 
-                                                                    <!-- Persyaratan Khusus Bidang Ekonomi-->
+                                                                </form>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                    
+                                                    <div class="col-lg-6">
+                                                        
+                                                    <div class="card">
+                                                                <div class="card-header">
+                                                                    <strong>Persyaratan Khusus</strong>
+                                                                </div>
+                                                                <div class="card-body card-block">
+                                                                    <form>
+                                                                    </p>
+                                                                        <!-- Persyaratan Khusus Bidang Ekonomi-->
                                                                     <div class="form-group" id="syaratkhususbidangekonomi">
                                                                         <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Surat Keterangan Usaha"> 
                                                                     </div>
@@ -201,26 +213,19 @@
                                                                     </div>
 
                                                                     <div class="form-actions form-group">
-                                                                    <button type="button" class="btn btn-primary"><i class="fa fa-star"></i>&nbsp; Pilih</button>
-                                                                    <button type="button" class="btn btn-secondary"><i class="fa fa-lightbulb-o"></i>&nbsp; Ulang (Klik Pilih Bidang)</button>
+                                                                    <button type="button" id="inputusulan" class="btn btn-primary"><i class="fa fa-star"></i>&nbsp; Pilih</button>
+                                                                    <button type="button" id="batalusulan" class="btn btn-secondary"><i class="fa fa-lightbulb-o"></i>&nbsp; Ulang (Klik Pilih Bidang)</button>
                                                                     </div>
-                                                                </form>
-
+                                                                    </form>
                                                                 </div>
                                                             </div>
                                                     </div>
+
                                                 </div>
                                             </div><!-- .animated -->
                                         </div><!-- .content -->
-                                        </div><!-- .End table responsive -->
                                     </div>
                                     <!-- .End Tab Pane Usulan --> 
-
-                                    <!-- .Tab Pane Lamaran --> 
-                                    <div class="tab-pane p-20" id="lamaran" role="tabpanel">
-                                        Lamaran Anda
-                                    </div>
-                                    <!-- .End Tab Pane Lamaran -->
 
                                 </div>
                             </div>
@@ -385,7 +390,9 @@
             $('#syaratkhususbidangpendidikan').hide(); 
             $('#syaratkhususbidangkesehatan').hide();   
             $('#syaratkhususbidangdakwahadvokasi').hide();         
-            $('#syaratkhususbidangkemanusiaan').hide();      
+            $('#syaratkhususbidangkemanusiaan').hide();     
+            $('#inputusulan').hide();
+            $('#batalusulan').hide();
 		}
 
         if($(this).val() == "1") {
@@ -393,7 +400,9 @@
             $('#syaratkhususbidangpendidikan').hide(); 
             $('#syaratkhususbidangkesehatan').hide();   
             $('#syaratkhususbidangdakwahadvokasi').hide();         
-            $('#syaratkhususbidangkemanusiaan').hide();      
+            $('#syaratkhususbidangkemanusiaan').hide();    
+            $('#inputusulan').show();
+            $('#batalusulan').show();  
 		}
 
         if($(this).val() == "2") {
@@ -401,7 +410,9 @@
             $('#syaratkhususbidangpendidikan').show(); 
             $('#syaratkhususbidangkesehatan').hide();   
             $('#syaratkhususbidangdakwahadvokasi').hide();         
-            $('#syaratkhususbidangkemanusiaan').hide();      
+            $('#syaratkhususbidangkemanusiaan').hide();  
+            $('#inputusulan').show();
+            $('#batalusulan').show();      
 		}
 
         if($(this).val() == "3") {
@@ -409,7 +420,9 @@
             $('#syaratkhususbidangpendidikan').hide(); 
             $('#syaratkhususbidangkesehatan').show();   
             $('#syaratkhususbidangdakwahadvokasi').hide();         
-            $('#syaratkhususbidangkemanusiaan').hide();      
+            $('#syaratkhususbidangkemanusiaan').hide();  
+            $('#inputusulan').show();
+            $('#batalusulan').show();      
 		}
 
         if($(this).val() == "4") {
@@ -417,7 +430,9 @@
             $('#syaratkhususbidangpendidikan').hide(); 
             $('#syaratkhususbidangkesehatan').hide();   
             $('#syaratkhususbidangdakwahadvokasi').show();         
-            $('#syaratkhususbidangkemanusiaan').hide();      
+            $('#syaratkhususbidangkemanusiaan').hide();    
+            $('#inputusulan').show();
+            $('#batalusulan').show();    
 		}
 
         if($(this).val() == "5") {
@@ -425,7 +440,9 @@
             $('#syaratkhususbidangpendidikan').hide(); 
             $('#syaratkhususbidangkesehatan').hide();   
             $('#syaratkhususbidangdakwahadvokasi').hide();         
-            $('#syaratkhususbidangkemanusiaan').show();      
+            $('#syaratkhususbidangkemanusiaan').show();     
+            $('#inputusulan').show();
+            $('#batalusulan').show();   
 		}
 	});
 	$("#bidang").trigger("change");
