@@ -141,7 +141,7 @@
             "order": [], 
             
             "ajax": {
-                "url": "<?php echo 'pendaftaranmustahik/get_data_calonmustahik'?>",
+                "url": "<?php echo 'lamarancalonmustahik/get_data_calonmustahik'?>",
                 "type": "POST"
             },
 

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class userkeldesberanda extends CI_Controller {
+class lamarancalonmustahik extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		if(!$this->session->userdata('email')){
@@ -12,7 +12,7 @@ class userkeldesberanda extends CI_Controller {
 	}
 
 	public function index(){
-		$data['content'] = 'user/keldes/beranda';
+		$data['content'] = 'user/keldes/lamarancalonmustahik';
 		$this->load->view('user/keldes/tampilanmenu',$data);
 	}
 
@@ -27,7 +27,7 @@ class userkeldesberanda extends CI_Controller {
 			$no++;
 			$row = array();
 			$row[] = $no;
-			$row[] = '<a href="userkeldesprofilmustahik?nik='.$field->nik.'&&iduser='.$iduser.'&&nama='.$field->nama.'">'.$field->nama.'</a>';
+			$row[] = '<a href="lamarancalonmustahik?nik='.$field->nik.'&&iduser='.$iduser.'&&nama='.$field->nama.'">'.$field->nama.'</a>';
 			$row[] = $field->nik;
 			$row[] = $field->jk;
 			$row[] = $field->tempatlahir;

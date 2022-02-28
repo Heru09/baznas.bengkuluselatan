@@ -85,7 +85,7 @@
                                                 <th>JK</th>
                                                 <th>TEMPAT LAHIR</th>
                                                 <th>TANGGAL LAHIR</th>
-                                                <th>TERDAFTAR</th>
+                                                <th>JENIS BANTUAN</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
@@ -96,7 +96,7 @@
                                                 <th>JK</th>
                                                 <th>TEMPAT LAHIR</th>
                                                 <th>TANGGAL LAHIR</th>
-                                                <th>TERDAFTAR</th>
+                                                <th>JENIS BANTUAN</th>
                                             </tr>
                                         </tfoot>
                                         <tbody id="table">

@@ -1,10 +1,10 @@
 <?php
 
 class muserkeldesberanda extends CI_Model {
-var $table = 'calonmustahik'; 
-	var $select  = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','terdaftar'); 
-	var $column_order = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','terdaftar'); 
-	var $column_search = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','terdaftar');
+var $table = 'mustahik'; 
+	var $select  = array('email','iduser','kk','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','bidang','bantuan','satuan','rp','tgl','via','ket'); 
+	var $column_order = array('email','iduser','kk','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','bidang','bantuan','satuan','rp','tgl','via','ket'); 
+	var $column_search = array('email','iduser','kk','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','bidang','bantuan','satuan','rp','tgl','via','ket');
 	
 	var $order = array('nama' => 'asc'); 
 

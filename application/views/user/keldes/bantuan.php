@@ -10,7 +10,6 @@
                                     <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home2" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Home</span></a> </li>
                                     <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profil" role="tab" id="getprofil"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Profil</span></a> </li>
                                     <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#bantuan" role="tab" id="getbantuan"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Bantuan</span></a> </li>
-                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#usulan" role="tab" id="getusulan"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Usulan</span></a> </li>
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content">
@@ -77,7 +76,7 @@
                                                 <p class="text-muted m-b-15 f-s-12">Terdaftar
                                                 <input type="text" name="terdaftar" id="terdaftar" class="form-control input-rounded" >
                                             </div>
-                                            <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Hapus</button>
+                                            <!-- <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Hapus</button> -->
                                         </div><!-- .End table responsive -->
                                     </div>
                                     <!-- .End Tab Pane Profil --> 
@@ -124,108 +123,6 @@
                                     </div>
                                     <!-- .End Tab Pane Bantuan --> 
 
-
-                                    <!-- .Tab Pane Usulan --> 
-                                    <div class="tab-pane p-20" id="usulan" role="tabpanel">
-                                        <!-- .table responsive -->
-                                        <div class="content">
-                                            <div class="animated fadeIn">
-                                                <div class="row">   
-                                                    <div class="col-lg-6">
-                                                            <div class="card">
-                                                                <div class="card-header">
-                                                                    <strong>Form Pilih Usulan</strong> <a href="" >.Download Petunjuk</a>
-                                                                </div>
-                                                                <div class="card-body card-block">
-                                                                <form>
-                                                                    <div class="has-warning form-group">
-                                                                        <label for="inputIsInvalid" class=" form-control-label"></label>
-                                                                        <select id="bidang" name="bidang" class="form-control">
-                                                                            <option value="pilihbidang">Pilih Bidang</option>
-                                                                        </select>
-                                                                    </div>                                                                  
-
-                                                                    <div class="has-success form-group">
-                                                                        <label for="inputIsInvalid" class=" form-control-label"></label>
-                                                                        <select name="program" id="program" class="form-control">
-                                                                            <option value="">Pilih Program</option>
-                                                                        </select>
-                                                                    </div>
-
-                                                                    <div class="has-success form-group">
-                                                                        <label for="inputIsInvalid" class=" form-control-label"></label>
-                                                                        <select name="jenisbantuan" id="jenisbantuan" class="form-control">
-                                                                            <option value="">Pilih Jenis Bantuan</option>
-                                                                        </select>
-                                                                    </div>
-
-                                                                    <div class="has-success form-group">
-                                                                        <label for="inputIsInvalid" class=" form-control-label"></label>
-                                                                        <select name="jenisbarang" id="jenisbarang" class="form-control">
-                                                                            <option value="">Pilih Jenis Barang</option>
-                                                                        </select>
-                                                                    </div>
-
-                                                                    <div class="has-success form-group">
-                                                                        <label for="inputIsInvalid" class=" form-control-label"></label>
-                                                                        <select name="namabarang" id="namabarang" class="form-control">
-                                                                            <option value="">Pilih Nama Barang</option>
-                                                                        </select>
-                                                                    </div>
-
-                                                                </form>
-                                                                </div>
-                                                            </div>
-                                                    </div>
-                                                    
-                                                    <div class="col-lg-6">
-                                                        
-                                                    <div class="card">
-                                                                <div class="card-header">
-                                                                    <strong>Persyaratan Khusus</strong>
-                                                                </div>
-                                                                <div class="card-body card-block">
-                                                                    <form>
-                                                                    </p>
-                                                                        <!-- Persyaratan Khusus Bidang Ekonomi-->
-                                                                    <div class="form-group" id="syaratkhususbidangekonomi">
-                                                                        <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Surat Keterangan Usaha"> 
-                                                                    </div>
-
-                                                                    <!-- Persyaratan Khusus Bidang Pendidikan-->
-                                                                    <div class="form-group" id="syaratkhususbidangpendidikan">
-                                                                        <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Surat Keterangan Sekolah"> 
-                                                                    </div>
-
-                                                                    <!-- Persyaratan Khusus Bidang Kesehatan-->
-                                                                    <div class="form-group" id="syaratkhususbidangkesehatan">
-                                                                        <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Surat Keterangan Sakit"> 
-                                                                    </div>
-
-                                                                    <!-- Persyaratan Khusus Bidang Dakwah Advokasi-->
-                                                                    <div class="form-group" id="syaratkhususbidangdakwahadvokasi">
-                                                                        <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Sertfikat Dakwah Advokasi"> 
-                                                                    </div>
-
-                                                                    <!-- Persyaratan Khusus Bidang Kemanusiaan-->
-                                                                    <div class="form-group" id="syaratkhususbidangkemanusiaan">
-                                                                        <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Surat Keterangan Tidak Mampu"> 
-                                                                    </div>
-
-                                                                    <div class="form-actions form-group">
-                                                                    <button type="button" id="inputusulan" class="btn btn-primary"><i class="fa fa-star"></i>&nbsp; Pilih</button>
-                                                                    <button type="button" id="batalusulan" class="btn btn-secondary"><i class="fa fa-lightbulb-o"></i>&nbsp; Ulang (Klik Pilih Bidang)</button>
-                                                                    </div>
-                                                                    </form>
-                                                                </div>
-                                                            </div>
-                                                    </div>
-
-                                                </div>
-                                            </div><!-- .animated -->
-                                        </div><!-- .content -->
-                                    </div>
-                                    <!-- .End Tab Pane Usulan --> 
 
                                 </div>
                             </div>
@@ -313,138 +210,7 @@
             });
         });
         // End GetBantuan
-
-        //Get Usulan
-        $('#getusulan').on('click',function(){
-
-            load_json_data('bidang');
-
-            function load_json_data(id, parent_id){
-                var html_code = '';
-                $.getJSON('usulan.json', function(data){
-                    html_code += '<option value= "pilihbidang">Pilih '+id+'</option>';
-                    $.each(data, function(key, value){
-                    if(id == 'bidang'){
-                        if(value.parent_id == '0'){
-                        html_code += '<option value="'+value.id+'">'+value.nama+'</option>';
-                        }
-                    }else{
-                        if(value.parent_id == parent_id){
-                        html_code += '<option value="'+value.id+'">'+value.nama+'</option>';
-                        }
-                    }
-                    });
-                    $('#'+id).html(html_code);
-                });
-            }
-
-            $(document).on('change','#bidang', function(){
-                var program_id = $(this).val();
-                if(program_id != ''){
-                    load_json_data('program', program_id);
-                }else{
-                    $('#program').html('<option value = "">Pilih Program</option>');
-                    $('#jenisbantuan').html('<option value = "">Pilih Jenis Bantuan</option>');
-                    $('#jenisbarang').html('<option value = "">Pilih Jenis Barang</option>');
-                    $('#namabarang').html('<option value = "">Pilih Nama Barang</option>');
-                }
-            });
-
-            $(document).on('change','#program', function(){
-                var jenisbantuan_id = $(this).val();
-                if(jenisbantuan_id != ''){
-                    load_json_data('jenisbantuan', jenisbantuan_id);
-                }else{
-                    $('#jenisbantuan').html('<option value = "">Pilih Jenis Bantuan</option>');
-                    $('#jenisbarang').html('<option value = "">Pilih Jenis Barang</option>');
-                    $('#namabarang').html('<option value = "">Pilih Nama Barang</option>');
-                }
-            });
-
-            $(document).on('change','#jenisbantuan', function(){
-                var jenisbarang_id = $(this).val();
-                if(jenisbarang_id != ''){
-                    load_json_data('jenisbarang', jenisbarang_id);
-                }else{
-                    $('#namabarang').html('<option value = "">Pilih Nama Barang</option>');
-                }
-            });
-
-            $(document).on('change','#jenisbarang', function(){
-                var namabarang_id = $(this).val();
-                if(namabarang_id != ''){
-                    load_json_data('namabarang', namabarang_id);
-                }else{
-                   
-                }
-            });
-
-        });
-        //End Get Usulan
-         
+        
     });
-
-    $("#bidang").change(function() {
-        if($(this).val() == "pilihbidang") {
-            $('#syaratkhususbidangekonomi').hide();
-            $('#syaratkhususbidangpendidikan').hide(); 
-            $('#syaratkhususbidangkesehatan').hide();   
-            $('#syaratkhususbidangdakwahadvokasi').hide();         
-            $('#syaratkhususbidangkemanusiaan').hide();     
-            $('#inputusulan').hide();
-            $('#batalusulan').hide();
-		}
-
-        if($(this).val() == "1") {
-            $('#syaratkhususbidangekonomi').show();
-            $('#syaratkhususbidangpendidikan').hide(); 
-            $('#syaratkhususbidangkesehatan').hide();   
-            $('#syaratkhususbidangdakwahadvokasi').hide();         
-            $('#syaratkhususbidangkemanusiaan').hide();    
-            $('#inputusulan').show();
-            $('#batalusulan').show();  
-		}
-
-        if($(this).val() == "2") {
-            $('#syaratkhususbidangekonomi').hide();
-            $('#syaratkhususbidangpendidikan').show(); 
-            $('#syaratkhususbidangkesehatan').hide();   
-            $('#syaratkhususbidangdakwahadvokasi').hide();         
-            $('#syaratkhususbidangkemanusiaan').hide();  
-            $('#inputusulan').show();
-            $('#batalusulan').show();      
-		}
-
-        if($(this).val() == "3") {
-            $('#syaratkhususbidangekonomi').hide();
-            $('#syaratkhususbidangpendidikan').hide(); 
-            $('#syaratkhususbidangkesehatan').show();   
-            $('#syaratkhususbidangdakwahadvokasi').hide();         
-            $('#syaratkhususbidangkemanusiaan').hide();  
-            $('#inputusulan').show();
-            $('#batalusulan').show();      
-		}
-
-        if($(this).val() == "4") {
-            $('#syaratkhususbidangekonomi').hide();
-            $('#syaratkhususbidangpendidikan').hide(); 
-            $('#syaratkhususbidangkesehatan').hide();   
-            $('#syaratkhususbidangdakwahadvokasi').show();         
-            $('#syaratkhususbidangkemanusiaan').hide();    
-            $('#inputusulan').show();
-            $('#batalusulan').show();    
-		}
-
-        if($(this).val() == "5") {
-            $('#syaratkhususbidangekonomi').hide();
-            $('#syaratkhususbidangpendidikan').hide(); 
-            $('#syaratkhususbidangkesehatan').hide();   
-            $('#syaratkhususbidangdakwahadvokasi').hide();         
-            $('#syaratkhususbidangkemanusiaan').show();     
-            $('#inputusulan').show();
-            $('#batalusulan').show();   
-		}
-	});
-	$("#bidang").trigger("change");
 
 </script>
