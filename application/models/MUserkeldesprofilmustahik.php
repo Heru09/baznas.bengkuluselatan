@@ -1,6 +1,6 @@
 <?php
 
-class MUserkeldesprofilmustahik extends CI_Model {
+class muserkeldesprofilmustahik extends CI_Model {
     
     public function get_profile($getnik, $getiduser){
 

@@ -1,6 +1,6 @@
 <?php
 
-class muserkeldesberanda extends CI_Model {
+class dbcalonmustahik extends CI_Model {
 var $table = 'calonmustahik'; 
 	var $select  = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','terdaftar'); 
 	var $column_order = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','terdaftar'); 

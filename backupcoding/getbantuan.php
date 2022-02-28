@@ -36,13 +36,7 @@ $('#getbantuan').on('click',function(){
 
 
 
-
-
-
-
-
-
-        $('#getbantuan').on('click',function(){
+      $('#getbantuan').on('click',function(){
             var getnik = $('#getnik').val();
             var getiduser = $('#getiduser').val();
             $('#tablemustahik').DataTable( {

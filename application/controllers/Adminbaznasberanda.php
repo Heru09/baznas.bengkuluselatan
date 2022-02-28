@@ -1,20 +1,21 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Adminbaznasberanda extends CI_Controller {
+class adminbaznasberanda extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
 		if(!$this->session->userdata('email')){
 			redirect('login');
 		}
-		$this->load->model('m_admin');
+		// $this->load->model('m_admin');
 		$this->load->database();
 	}
 	public function index()
 	{
 		$data['content'] = 'admin/baznas/beranda';
-		$data['email'] = $this->session->userdata('email');
+		/*$data['email'] = $this->session->userdata('email');
+		$this->load->view('admin/baznas/tampilanmenu',$data);*/
 		$this->load->view('admin/baznas/tampilanmenu',$data);
 	}
 

@@ -161,16 +161,16 @@
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
-                        <li> <a href="<?php echo base_url()?>Userkeldesberanda" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard </span></span></a>
+                        <li> <a href="<?php echo base_url()?>userkeldesberanda" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard </span></span></a>
                         </li>
                         <li class="nav-label">Pendaftaran</li>
-                        <li> <a href="<?php echo base_url()?>Userkeldespendaftaran" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Mustahik</span></span></a>
+                        <li> <a href="<?php echo base_url()?>pendaftaranmustahik" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Mustahik</span></span></a>
                         </li>
                         <li class="nav-label">Fisabilillah</li>
-                        <li> <a href="<?php echo base_url()?>Userkeldesgurumengaji" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Guru Mengaji</span></span></a>
+                        <li> <a href="<?php echo base_url()?>userkeldesgurumengaji" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Guru Mengaji</span></span></a>
                         </li>
                         <li class="nav-label">e-Pid</li>
-                        <li> <a href="<?php echo base_url()?>Userkeldesmpid" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Peraturan</span></span></a>
+                        <li> <a href="<?php echo base_url()?>userkeldesmpid" aria-expanded="false"><i class="fa fa-wpforms"></i><span class="hide-menu">Peraturan</span></span></a>
                         </li>
                     </ul>
                 </nav>

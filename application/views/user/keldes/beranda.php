@@ -73,7 +73,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Daftar Calon Mustahik <?php  echo $this->session->userdata('namauser');?> Kec. <?php  echo $this->session->userdata('kec');?></h4>
+                                <h4 class="card-title">Daftar Mustahik <?php  echo $this->session->userdata('namauser');?> Kec. <?php  echo $this->session->userdata('kec');?></h4>
                                 <div class="table">
                                     <form class=""  method="POST" >
                                     <table id="table" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
@@ -121,7 +121,7 @@
             "order": [], 
             
             "ajax": {
-                "url": "<?php echo 'Userkeldesberanda/get_data_calonmustahik'?>",
+                "url": "<?php echo 'userkeldesberanda/get_data_calonmustahik'?>",
                 "type": "POST"
             },
 

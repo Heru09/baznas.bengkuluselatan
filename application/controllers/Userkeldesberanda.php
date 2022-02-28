@@ -1,14 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Userkeldesberanda extends CI_Controller {
+class userkeldesberanda extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		if(!$this->session->userdata('email')){
 			redirect('login');
 		}
 		$this->load->helper(array('form', 'url'));
-		$this->load->model('Muserkeldesberanda', '', TRUE);
+		$this->load->model('muserkeldesberanda', '', TRUE);
 	}
 
 	public function index(){
@@ -20,7 +20,7 @@ class Userkeldesberanda extends CI_Controller {
 		$iduser = $this->session->userdata('iduser');
 		$namauser = $this->session->userdata('namauser');
 
-		$list = $this->Muserkeldesberanda->get_datatables($iduser);
+		$list = $this->muserkeldesberanda->get_datatables($iduser);
 		$data = array();
 		$no = $this->input->post('start');
 		foreach ($list as $field){
@@ -39,8 +39,8 @@ class Userkeldesberanda extends CI_Controller {
 
 		$output = array(
             "draw" => $this->input->post('draw'),
-            "recordsTotal" => $this->Muserkeldesberanda->count_all(),
-            "recordsFiltered" => $this->Muserkeldesberanda->count_filtered($iduser),
+            "recordsTotal" => $this->muserkeldesberanda->count_all(),
+            "recordsFiltered" => $this->muserkeldesberanda->count_filtered($iduser),
             "data" => $data,
         );
    

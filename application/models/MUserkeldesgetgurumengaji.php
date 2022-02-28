@@ -1,6 +1,6 @@
 <?php
 
-class MUserkeldesgetgurumengaji extends CI_Model {
+class muserkeldesgetgurumengaji extends CI_Model {
 var $table = 'gurumengaji'; 
 	var $select  = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','skpengangkatanbaznas','skpengangkatandesa','skpemberhentianbaznas','skpemberhentiandesa','tempatkegiatan','linklaporan'); 
 	var $column_order = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','skpengangkatanbaznas','skpengangkatandesa','skpemberhentianbaznas','skpemberhentiandesa','tempatkegiatan','linklaporan'); 

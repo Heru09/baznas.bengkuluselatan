@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Userkeldesgurumengaji extends CI_Controller {
+class userkeldesgurumengaji extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		if(!$this->session->userdata('email')){

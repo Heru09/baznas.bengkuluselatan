@@ -1,6 +1,6 @@
 <?php
 
-class MUserkeldesbantuanmustahik extends CI_Model {
+class muserkeldesbantuanmustahik extends CI_Model {
     
     public function get_mustahik($getnik, $getiduser){
 

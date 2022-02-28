@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class login extends CI_Controller {
 
 	public function index()
 	{
@@ -26,11 +26,11 @@ class Login extends CI_Controller {
 				$sess_data['status']	 = $data->status;
 				$this->session->set_userdata($sess_data);
 				if($sess_data['status'] == 0){
-					redirect('Userkeldesberanda');
+					redirect('userkeldesberanda');
 				}elseif ($sess_data['status'] == 1) {
-					redirect('Adminbaznasberanda');
+					redirect('adminbaznasberanda');
 				}elseif ($sess_data['status'] == 2) {
-					redirect('Adminrsmuberanda');
+					redirect('adminrsmuberanda');
 				}
 			}
 			
