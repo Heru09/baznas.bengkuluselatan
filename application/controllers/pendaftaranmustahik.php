@@ -32,7 +32,7 @@ class pendaftaranmustahik extends CI_Controller {
 			$row[] = $field->nik;
 			$row[] = $field->jk;
 			$row[] = $field->tempatlahir;
-			$row[] = $field->tanggallahir;	
+			$row[] = $field->status;	
 			$row[] = '<a href="userkeldesprofilmustahik?nik='.$field->nik.'&&iduser='.$iduser.'&&nama='.$field->nama.'">
 			<button type="button" id="disetujui" class="btn btn-success btn-flat btn-addon btn-xs m-b-10">'.$field->terdaftar.'</button>
 			</a>
@@ -52,25 +52,48 @@ class pendaftaranmustahik extends CI_Controller {
         echo json_encode($output);
 	} 
 
-	// function get_profile(){
+	function get_profile(){
 
-	// 	$getnik = $_POST["getnik"];
-	// 	$getiduser = $_POST["getiduser"];
+		$getnik = $_POST["getnik"];
+		$getiduser = $_POST["getiduser"];
 
-	// 	$data = $this->MUserkeldesprofilmustahik->get_profile($getnik, $getiduser); 
-	// 	foreach ($data as $row){
-	// 		$profile['kk'] = $row->kk; 
-	// 		$profile['nama'] = $row->nama; 
-	// 		$profile['namapanggilan'] = $row->namapanggilan; 
-	// 		$profile['nik'] = $row->nik; 
-	// 		$profile['jk'] = $row->jk; 
-	// 		$profile['tempatlahir'] = $row->tempatlahir; 
-	// 		$profile['tanggallahir'] = $row->tanggallahir; 
-	// 		$profile['agama'] = $row->agama; 
-	// 		$profile['hp'] = $row->hp; 
-	// 		$profile['alamatlengkap'] = $row->alamatlengkap; 
-	// 		$profile['terdaftar'] = $row->terdaftar;  
-	// 	}
-	// 	echo json_encode($profile);  
-	// }
+		$data = $this->MUserkeldesprofilmustahik->get_profile($getnik, $getiduser); 
+		foreach ($data as $row){
+			$profile['kk'] = $row->kk; 
+			$profile['nama'] = $row->nama; 
+			$profile['namapanggilan'] = $row->namapanggilan; 
+			$profile['nik'] = $row->nik; 
+			$profile['jk'] = $row->jk; 
+			$profile['tempatlahir'] = $row->tempatlahir; 
+			$profile['tanggallahir'] = $row->tanggallahir; 
+			$profile['agama'] = $row->agama; 
+			$profile['hp'] = $row->hp; 
+			$profile['alamatlengkap'] = $row->alamatlengkap; 
+			$profile['terdaftar'] = $row->terdaftar;  
+		}
+		echo json_encode($profile);  
+	}
+
+	function get_bantuan(){
+        $getnik = $_POST["getnik"];
+		$getiduser = $_POST["getiduser"];
+		$getdatabantuan = array();
+		$getdatabantuan["data"] = array();
+		$no = 1;
+		 $data = $this->MUserkeldesbantuanmustahik->get_mustahik($getnik, $getiduser);
+		 foreach ($data as $row){
+			$mustahik['no'] = $no++; 
+			$mustahik['bidang'] = $row->bidang;
+			$mustahik['nik'] = $row->nik; 
+			$mustahik['bantuan'] = $row->bantuan; 
+			$mustahik['satuan'] = $row->satuan; 
+			$mustahik['rp'] = $row->rp; 
+			$mustahik['tgl'] = $row->tgl; 
+			$mustahik['via'] = $row->via; 
+			$mustahik['ket'] = $row->ket; 
+			 array_push($getdatabantuan["data"], $mustahik);
+			
+		 }
+		 echo json_encode($getdatabantuan);  
+	}
 }

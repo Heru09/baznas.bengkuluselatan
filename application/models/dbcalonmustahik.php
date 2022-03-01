@@ -2,9 +2,9 @@
 
 class dbcalonmustahik extends CI_Model {
 var $table = 'calonmustahik'; 
-	var $select  = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','terdaftar'); 
-	var $column_order = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','terdaftar'); 
-	var $column_search = array('email','iduser','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','terdaftar');
+	var $select  = array('email','iduser','kk','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','status','terdaftar'); 
+	var $column_order = array('email','iduser','kk','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','status','terdaftar'); 
+	var $column_search = array('email','iduser','kk','nama','namapanggilan','nik','jk','tempatlahir','tanggallahir','agama','hp','alamatlengkap','status','terdaftar');
 	
 	var $order = array('nama' => 'asc'); 
 

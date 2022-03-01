@@ -9,8 +9,8 @@
                                 <ul class="nav nav-tabs customtab" role="tablist">
                                     <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home2" role="tab"><span class="hidden-sm-up"><i class="ti-home"></i></span> <span class="hidden-xs-down">Pendaftaran</span></a> </li>
                                     <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#getstatus" role="tab" id="status"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Status</span></a> </li>
-                                    <!-- <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#bantuan" role="tab" id="getbantuan"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Bantuan</span></a> </li>
-                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#usulan" role="tab" id="getusulan"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Usulan</span></a> </li> -->
+                                    <!-- <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#bantuan" role="tab" id="getbantuan"><span class="hidden-sm-up"><i class="ti-user"></i></span> <span class="hidden-xs-down">Bantuan</span></a> </li> -->
+                                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#usulan" role="tab" id="getusulan"><span class="hidden-sm-up"><i class="ti-email"></i></span> <span class="hidden-xs-down">Usulan</span></a> </li>
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content">
@@ -74,7 +74,7 @@
                                     <!-- .End Tab Pane Menu Utama -->
 
 
-<!--                                     <!-- .Tab Pane Profil -->    
+<!--                                    .Tab Pane Profil -->    
                                     <div class="tab-pane  p-20" id="getstatus" role="tabpanel">     
 
                                         <!-- .table responsive -->
@@ -123,6 +123,107 @@
                                     <!-- .End Tab Pane Profil --> 
 
                                 </div>
+                                <!-- .Tab Pane Usulan --> 
+                                <div class="tab-pane p-20" id="usulan" role="tabpanel">
+                                        <!-- .table responsive -->
+                                        <div class="content">
+                                            <div class="animated fadeIn">
+                                                <div class="row">   
+                                                    <div class="col-lg-6">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <strong>Form Pilih Usulan</strong> <a href="" >.Download Petunjuk</a>
+                                                                </div>
+                                                                <div class="card-body card-block">
+                                                                <form>
+                                                                    <div class="has-warning form-group">
+                                                                        <label for="inputIsInvalid" class=" form-control-label"></label>
+                                                                        <select id="bidang" name="bidang" class="form-control">
+                                                                            <option value="pilihbidang">Pilih Bidang</option>
+                                                                        </select>
+                                                                    </div>                                                                  
+
+                                                                    <div class="has-success form-group">
+                                                                        <label for="inputIsInvalid" class=" form-control-label"></label>
+                                                                        <select name="program" id="program" class="form-control">
+                                                                            <option value="">Pilih Program</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                    <div class="has-success form-group">
+                                                                        <label for="inputIsInvalid" class=" form-control-label"></label>
+                                                                        <select name="jenisbantuan" id="jenisbantuan" class="form-control">
+                                                                            <option value="">Pilih Jenis Bantuan</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                    <div class="has-success form-group">
+                                                                        <label for="inputIsInvalid" class=" form-control-label"></label>
+                                                                        <select name="jenisbarang" id="jenisbarang" class="form-control">
+                                                                            <option value="">Pilih Jenis Barang</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                    <div class="has-success form-group">
+                                                                        <label for="inputIsInvalid" class=" form-control-label"></label>
+                                                                        <select name="namabarang" id="namabarang" class="form-control">
+                                                                            <option value="">Pilih Nama Barang</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                </form>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                    
+                                                    <div class="col-lg-6">
+                                                        
+                                                    <div class="card">
+                                                                <div class="card-header">
+                                                                    <strong>Persyaratan Khusus</strong>
+                                                                </div>
+                                                                <div class="card-body card-block">
+                                                                    <form>
+                                                                    </p>
+                                                                        <!-- Persyaratan Khusus Bidang Ekonomi-->
+                                                                    <div class="form-group" id="syaratkhususbidangekonomi">
+                                                                        <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Surat Keterangan Usaha"> 
+                                                                    </div>
+
+                                                                    <!-- Persyaratan Khusus Bidang Pendidikan-->
+                                                                    <div class="form-group" id="syaratkhususbidangpendidikan">
+                                                                        <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Surat Keterangan Sekolah"> 
+                                                                    </div>
+
+                                                                    <!-- Persyaratan Khusus Bidang Kesehatan-->
+                                                                    <div class="form-group" id="syaratkhususbidangkesehatan">
+                                                                        <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Surat Keterangan Sakit"> 
+                                                                    </div>
+
+                                                                    <!-- Persyaratan Khusus Bidang Dakwah Advokasi-->
+                                                                    <div class="form-group" id="syaratkhususbidangdakwahadvokasi">
+                                                                        <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Sertfikat Dakwah Advokasi"> 
+                                                                    </div>
+
+                                                                    <!-- Persyaratan Khusus Bidang Kemanusiaan-->
+                                                                    <div class="form-group" id="syaratkhususbidangkemanusiaan">
+                                                                        <input type="text" class="form-control" id="suratusaha" placeholder="Nomor Surat Keterangan Tidak Mampu"> 
+                                                                    </div>
+
+                                                                    <div class="form-actions form-group">
+                                                                    <button type="button" id="inputusulan" class="btn btn-primary"><i class="fa fa-star"></i>&nbsp; Pilih</button>
+                                                                    <button type="button" id="batalusulan" class="btn btn-secondary"><i class="fa fa-lightbulb-o"></i>&nbsp; Ulang (Klik Pilih Bidang)</button>
+                                                                    </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+
+                                                </div>
+                                            </div><!-- .animated -->
+                                        </div><!-- .content -->
+                                    </div>
+                                    <!-- .End Tab Pane Usulan --> 
                             </div>
                         </div>
                     </div>    
@@ -141,7 +242,7 @@
             "order": [], 
             
             "ajax": {
-                "url": "<?php echo 'lamarancalonmustahik/get_data_calonmustahik'?>",
+                "url": "<?php echo 'pendaftaranmustahik/get_data_calonmustahik'?>",
                 "type": "POST"
             },
 
@@ -156,7 +257,7 @@
         }); 
     });
 </script>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
     $(document).ready(function(){
 
         // GetProfile    
@@ -166,7 +267,7 @@
             var getnama = $('#getnama').val();
 
             $.ajax({
-               url: '<?php echo base_url('Userkeldesprofilmustahik/get_profile')?>',
+               url: '<?php echo base_url('pendaftaranmustahik/get_profile')?>',
                type: 'POST',
                data:{
                    getnik: $("#getnik").val(),
@@ -210,7 +311,7 @@
             "destroy": true,
 
             "ajax": {
-                "url": "<?php echo 'Userkeldesbantuanmustahik/get_bantuan'?>",
+                "url": "<?php echo 'pendaftaranmustahik/get_bantuan'?>",
                 "type": "POST",
                 "data": function(data){
                     data.getnik = $("#getnik").val();
